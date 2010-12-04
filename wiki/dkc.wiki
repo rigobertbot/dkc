@@ -12,3 +12,5 @@
   * *Layout.zip* — Архив со свёрстанным макетом, включая CSS и JavaScript.
   * *Template.zip* — Архив с шаблонами для Drupal. Весь шаблон (_dkcenter_). 
   * *Дизайн сайта.zip* — Архив с PNG'шками, дизайн сайта до верстки.
+
+[http://code.google.com/p/dkc/wiki/sourceCode Тут] примерно чего и как.

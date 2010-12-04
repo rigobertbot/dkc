@@ -1,0 +1,167 @@
+/* $Id: style.css,v 0.5a 2010/11/26 17:41:03 Dmitry Tretyakov Exp $ */
+
+	/* Styles for other pages */
+	
+#mainHeader {
+	display:block;
+	position:relative;
+	width:688px;
+	float:left;
+	margin-top:8px;
+	margin-left:152px;
+}
+	
+
+/* Start of Column CSS */
+div.mainContentsColumnContainer {
+	clear:left;
+	float:left;
+	width:100%;
+	overflow:hidden;
+	background:#FFF; /* column 2 background colour */
+	margin-top:20px;
+	margin-bottom:36px;
+
+
+}
+div.sidebarColumnContainer {
+	float:left;
+	width:100%;
+	position:relative;
+	right:-140px;
+	background-image:url(images/grid.gif); /* column 1 background colour */
+	border-left:2px solid #7DABCF;
+}
+
+/* Left navigation bar */
+div.sidebar {
+	float:left;
+	width:134px;
+	position:relative;
+	left:-138px;;
+	overflow:hidden;
+	margin-top:18px;
+}
+
+div.sidebar a {
+	display:block;
+	font-size:14px;
+	line-height:18px;
+	padding:0 2px;
+	margin-bottom:18px;
+	font-weight:bold;
+	border-bottom:1px solid #7DABCF;
+	text-decoration:none;
+	color:#3A5699;
+	
+}
+
+div.sidebar a:hover {
+	font-size:14px;
+	line-height:18px;
+	margin-bottom:18px;
+	font-weight:bold;
+	border-bottom:1px solid #FFF;
+	text-decoration:none;
+	color:#FFF;
+	background-color:#7DABCF;
+}
+
+div.mainContents {
+	float:left;
+	width:830px;
+	position:relative;
+	left:-122px;
+	overflow:hidden;
+}
+
+/* Used Equal Height Columns with Cross-Browser CSS Tutorial
+	by MATTHEW JAMES TAYLOR
+	You can find this tuturial here
+	http://matthewjamestaylor.com/blog/equal-height-columns-cross-browser-css-no-hacks
+*/
+
+#telephoneAbout {
+	width:404px;
+	float:left;
+	margin-top:18px;
+	margin-right:12px;
+	margin-bottom:18px;
+}
+
+div.rightImage {
+	margin-top:18px;
+}
+
+
+div.caption {
+	clear:both;
+	background-color:#CBDDEC;
+	border: 1px solid #7DABCF;
+	padding:8px;
+	width:672px;
+}
+
+div.caption img {
+	float:left;
+}
+
+div.caption p {
+	margin-left:80px;
+	font-size:14px;
+	line-height:18px;
+	font-weight:bold;
+}
+
+
+/* Table styles */
+
+div.tableHelp {
+	clear:both;
+	width:688px;
+	margin-top:36px;
+}
+
+div.tableHelp table {
+	width:688px;
+	background-color:#fff;
+	border:1px solid #7DABCF;
+}
+
+div.tableHelp table thead {
+	background-color:#7DABCF;
+	color:#FFF;
+}
+
+/* table and cell's width */
+
+#leftCell {
+	width:242px;
+}
+
+#rightCell {
+	width:348px;
+}
+
+div.tableHelp table thead tr td {
+	font-weight:bold;
+	font-size:14px;
+	line-height:18px;
+	padding:0px 4px;
+	vertical-align:center;
+	text-align:center;
+}
+
+div.tableHelp table tbody tr td {
+	font-size:12px;
+	line-height:18px;
+	padding:0px 4px;
+	text-align:left;
+	vertical-align:center;
+	border:1px solid #7DABCF;
+}
+
+tr.even {
+	background-color:#CBDDEC;
+}
+

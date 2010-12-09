@@ -117,7 +117,7 @@
   <?php print $head; ?>
   <?php print $styles; ?>
   <?php print $scripts; ?>
-<base href="<?php print $base_path.$directory;?>" />
+<base href="<?php print $base_path.$directory;?>/" />
 </head>
 <body>
 	<!-- Header_Image region -->

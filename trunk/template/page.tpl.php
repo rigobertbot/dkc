@@ -140,7 +140,6 @@
 
       	</div>
     <?php endif; ?>
-		</div>
 		
 		
 <!-- Front page Regions and Data -->
@@ -149,7 +148,6 @@
 	
 	
 	<!-- Logotype and main site header -->
-	<?php if ($site_header): ?>
 	<div class="header">
 		<div id="mainHeaderContainer">
 			<a href="http://talbothouse.local/~talbot" title="<?php print t('Home'); ?>" rel="home" id="logo">
@@ -165,22 +163,18 @@
 				</a>
 			</h1>
 		</div>      
-	</div>
-	<?php endif; ?>
+	</div>	
 	
 	
 	
-	
-	<div class="contents">
 	
 	<!-- Left column container -->
-	<?php if ($content_left): ?>
+	<div class="contents">
 		<div class="projectsContainer">
 			<?php print $content_left; ?>
-			<?php print $content; ?>
+			<?php print $content; ?>	
 		</div>
-	<?php endif; ?>
-	
+	</div>	
 	<!-- Right column container -->
 	<?php if ($content_right): ?>
 		<div class="meltedContentsContainer">
@@ -194,15 +188,20 @@
 			
 			<hr id="mainPageLine" />
     		
-    		<img id="sunImage" src="<?php print $base_path.$directory;?>/images/sunImage.png" alt="#" />
+    		<img id="sunImage" src="<?php print $base_path.$directory;?>./images/sunImage.png" alt="#" />
     		
     		<?php print $content_news; ?>
 		
 		</div>
 	<?php endif; ?>
-	</div>
 	<!-- End of front page -->
 <? endif; ?>
+	
+<?php if(!$is_front): ?>
+	<div class="contents">
+		<?php print $content; ?>
+	</div>	
+<?php endif; ?>
 	
 	
 	
@@ -222,29 +221,11 @@
 	 <div id="main-wrapper"><div id="main" class="clearfix<?php if ($primary_links || $navigation) { print ' with-navigation'; } ?>">
 
       <div id="content" class="column"><div class="section">
-
-        <?php if ($mission): ?>
-          <div id="mission"><?php print $mission; ?></div>
-        <?php endif; ?>
-
-        <?php print $highlight; ?>
-
-        <?php print $breadcrumb; ?>
-        <?php if ($title): ?>
-          <h1 class="title"><?php print $title; ?></h1>
-        <?php endif; ?>
         <?php print $messages; ?>
         <?php if ($tabs): ?>
           <div class="tabs"><?php print $tabs; ?></div>
         <?php endif; ?>
         <?php print $help; ?>
-
-        <?php print $content_top; ?>
-
-        <div id="content-area">
-          <?php print $content; ?>
-        </div>
-
         <?php print $content_bottom; ?>
 
       </div></div> <!-- /.section, /#content -->

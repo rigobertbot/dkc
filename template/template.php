@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 // $Id: template.php,v 1.21 2009/08/12 04:25:15 johnalbin Exp $
 
 /**
@@ -112,18 +112,27 @@ function STARTERKIT_preprocess_page(&$vars, $hook) {
  * @param $hook
  *   The name of the template being rendered ("node" in this case.)
  */
-/* -- Delete this line if you want to use this function
-function STARTERKIT_preprocess_node(&$vars, $hook) {
-  $vars['sample_variable'] = t('Lorem ipsum.');
+function dkcenter_preprocess_node(&$variables) {
+	$node = $variables['node']; // Declaring array of variables
+	
+	// Creating projects variables 
+	/* if  ($node->type == "projects") { */
+		$variables['projectTitle'] = $node->title; // Title of the Project
+		$variables['projectBody'] = $node->content['body']['#value']; // Main project text, HTML possible
+		$variables['projectHeader'] = $node->field_project_header[0]['safe']; // Project header (h2 header)
+		$variables['projectID'] = $node->nid; // Project identificator, using in id= tag
+		$variables['projectSummary'] = $node->teaser;
+}
+
+// }
 
   // Optionally, run node-type-specific preprocess functions, like
-  // STARTERKIT_preprocess_node_page() or STARTERKIT_preprocess_node_story().
+ /* // STARTERKIT_preprocess_node_page() or STARTERKIT_preprocess_node_story().
   $function = __FUNCTION__ . '_' . $vars['node']->type;
   if (function_exists($function)) {
     $function($vars, $hook);
-  }
-}
-// */
+  } */
+
 
 /**
  * Override or insert variables into the comment templates.

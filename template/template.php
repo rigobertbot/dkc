@@ -116,15 +116,13 @@ function dkcenter_preprocess_node(&$variables) {
 	$node = $variables['node']; // Declaring array of variables
 	
 	// Creating projects variables 
-	/* if  ($node->type == "projects") { */
-		$variables['projectTitle'] = $node->title; // Title of the Project
-		$variables['projectBody'] = $node->content['body']['#value']; // Main project text, HTML possible
-		$variables['projectHeader'] = $node->field_project_header[0]['safe']; // Project header (h2 header)
-		$variables['projectID'] = $node->nid; // Project identificator, using in id= tag
-		$variables['projectSummary'] = $node->teaser;
+	$variables['projectTitle'] = $node->title; // Title of the Project
+	$variables['projectBody'] = $node->content['body']['#value']; // Main project text, HTML possible
+	$variables['projectHeader'] = $node->field_project_header[0]['safe']; // Project header (h2 header)
+	$variables['projectID'] = $node->nid; // Project identificator, using in id= tag
+	$variables['projectSummary'] = $node->teaser; // Teaser for the frontpage
 }
 
-// }
 
   // Optionally, run node-type-specific preprocess functions, like
  /* // STARTERKIT_preprocess_node_page() or STARTERKIT_preprocess_node_story().

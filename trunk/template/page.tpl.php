@@ -115,7 +115,11 @@
 <head>
   <title><?php print $head_title; ?></title>
   <?php print $head; ?>
-  <?php print $styles; ?>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/dkcenter/css/reset.css?B" />
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/dkcenter/css/common.css?B" />
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/dkcenter/css/front-page.css?B" />
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/dkcenter/css/style.css?B" />
+<link type="text/css" rel="stylesheet" media="print" href="/sites/all/themes/dkcenter/css/print.css?B" />
   <?php print $scripts; ?>
 <base href="<?php print $base_path.$directory;?>/" />
 </head>
@@ -145,10 +149,8 @@
 <!-- Front page Regions and Data -->
 
 <?php if ($is_front): ?>	
-	
-	
-	<!-- Logotype and main site header -->
-	<div class="header">
+ <!-- Logotype and main site header -->
+ <div class="header">
 		<div id="mainHeaderContainer">
 			<a href="http://talbothouse.local/~talbot" title="<?php print t('Home'); ?>" rel="home" id="logo">
 				<img class="logotype" src="<?php print $logo; ?>" 
@@ -164,24 +166,18 @@
 			</h1>
 		</div>      
 	</div>	
-	
-	
-	
-	
-	<!-- Left column container -->
-	<div class="contents">
-		<div class="projectsContainer">
-			<?php print $content_left; ?>
-			<?php print $content; ?>	
-		</div>
-	</div>	
+ 
+ <!-- Left column container -->
+ <div class="contents">
+  <div class="projectsContainer">
+   <?php print $content; ?>
+  </div>
+ </div>
+ 
 	<!-- Right column container -->
-	<?php if ($content_right): ?>
 		<div class="meltedContentsContainer">
 			<?php print $content_right; ?>
-		</div>
-	<?php endif; ?>
-	
+		</div>	
 	<!-- News container -->
 	<?php if ($content_news): ?>
 		<div class="newsContentsContainer">
@@ -197,10 +193,23 @@
 	<!-- End of front page -->
 <? endif; ?>
 	
+<!-- NO FRONT PAGE -->	
+	
 <?php if(!$is_front): ?>
-	<div class="contents">
-		<?php print $content; ?>
-	</div>	
+<div class="contents">
+  <div class="mainContentsColumnContainer">
+  	<div class="sidebarColumnContainer">
+    	
+    		<!-- Панель с навигацией слева -->
+				<div class="sidebar">
+				</div>
+  
+  	<div class="mainContents">
+   <?php print $content; ?>
+   </div>
+  </div>
+</div>
+</div>
 <?php endif; ?>
 	
 	
@@ -213,6 +222,9 @@
 		<li>Переменная <code>$logo</code>:&nbsp;<?php print $logo; ?></li>
 		<li>Переменная <code>$base_path</code>:&nbsp;<?php print $base_path; ?></li>
 		</ul>
+		<pre>
+		<?php print $styles; ?>
+		</pre>
 	<?php endif; ?>
 	
 	

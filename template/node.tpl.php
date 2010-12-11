@@ -1,5 +1,5 @@
 ﻿<?php
-// $Id: node.tpl.php,v 1.4.2.1 2009/08/10 10:48:33 goba Exp $
+// $Id: node.tpl.php,v 0.6.4.1 2010/12/10 12:48:33 talbot Exp $
 
 /**
  * @file node.tpl.php
@@ -50,6 +50,8 @@
 ?>
 <div id="node-<?php print $node->nid; ?>" class="node<?php if ($sticky) { print ' sticky'; } ?><?php if (!$status) { print ' node-unpublished'; } ?> clear-block">
 
+<?php print $picture ?>
+
 <?php if (!$page): ?>
   <h2><a href="<?php print $node_url ?>" title="<?php print $title ?>"><?php print $title ?></a></h2>
 <?php endif; ?>
@@ -63,31 +65,9 @@
     <div class="terms terms-inline"><?php print $terms ?></div>
   <?php endif;?>
   </div>
-  
-  
-  <div class="contents">
-		<div class="projectsContainer">
-			<h2>Our Projects</h2>
-			
-			<div class="project" id="project<?php print $projectID; ?>">
-				<h3><?php print $projectHeader; ?></h3>
-				<p><?php print $projectBody; ?></p>
-				<p><?php print $projectSummary; ?></p>
-				<p><?php print $projectID; ?></p>
-			</div>
-		</div>
-	</div>
-	<div class="meltedContentsContainer">
-		<div class="bannersAndProjects">
-			<div class="projectsContainer2">
-			<?php print $content ?>
-			</div>
-		</div>
-	</div>
-  <!-- <div class="contents">
-  	<pre>
-  	<?php print_r($node); ?>
-  	</pre>
+
+  <div class="content">
+    <?php print $content ?>
   </div>
-	-->
-  <?php print $links; ?>
+  
+</div>

@@ -115,13 +115,13 @@
 <head>
   <title><?php print $head_title; ?></title>
   <?php print $head; ?>
+<base href="http://dkz.neezyl.com<?php print $base_path.$directory;?>/" />
 <link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/dkcenter/css/reset.css?B" />
 <link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/dkcenter/css/common.css?B" />
 <link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/dkcenter/css/front-page.css?B" />
 <link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/dkcenter/css/style.css?B" />
 <link type="text/css" rel="stylesheet" media="print" href="/sites/all/themes/dkcenter/css/print.css?B" />
   <?php print $scripts; ?>
-<base href="<?php print $base_path.$directory;?>/" />
 </head>
 <body>
 	<!-- Header_Image region -->

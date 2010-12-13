@@ -57,7 +57,13 @@
 
 <?php if ($page): ?>
  	<h2><?php print $projectHeader; ?></h2>
-		<div class="aboutProject"><?php print $projectBody; ?></div>
+	<div class="aboutProject"><?php print $projectBody; ?></div>
+	<div class="rightImage"><img src="http://dkz.neezyl.com/<?php print $projectImage_filepath; ?>" alt="<?php print $projectImage_alt; ?>" title="<?php print $projectImage_title; ?>" />
+	<?php print $projectCaption; ?>
+	</div>
+	<div class="citation"><img src="http://dkz.neezyl.com/<?php print $projectCitationImage_filepath; ?>" alt="<?php print $projectCitationImage_alt; ?>" title="<?php print $projectCitationImage_title; ?>" />
+	<?php print $projectCitation; ?>
+	</div>
 <?php endif; ?>
 
 
@@ -79,11 +85,3 @@
 	
 </div>
 <?php endif; ?>
-
-<div>
-  <pre>
-  	<?php print_r ($node); ?>
-  </pre>
-  
-  <pre><?php print_r ($block); ?></pre>
-</div>

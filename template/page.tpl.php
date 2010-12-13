@@ -116,10 +116,10 @@
   <title><?php print $head_title; ?></title>
   <?php print $head; ?>
 <base href="http://dkz.neezyl.com<?php print $base_path.$directory;?>/" />
-<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/dkcenter/css/reset.css?B" />
-<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/dkcenter/css/common.css?B" />
-<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/dkcenter/css/front-page.css?B" />
-<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/dkcenter/css/style.css?B" />
+<link type="text/css" rel="stylesheet" media="all"  href="/sites/all/themes/dkcenter/css/reset.css" />
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/dkcenter/css/common.css" />
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/dkcenter/css/front-page.css" />
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/dkcenter/css/style.css" />
 <link type="text/css" rel="stylesheet" media="print" href="/sites/all/themes/dkcenter/css/print.css?B" />
   <?php print $scripts; ?>
 </head>
@@ -170,7 +170,7 @@
  <!-- Left column container -->
  <div class="contents">
   <div class="projectsContainer">
-   <?php print $content; ?>
+  	<?php print $content_left; ?>
   </div>
  </div>
  
@@ -196,6 +196,17 @@
 <!-- NO FRONT PAGE -->	
 	
 <?php if(!$is_front): ?>
+
+<div class="header">
+ <div id="mainHeader">
+  <h1><?php print $title; ?></h1>
+ </div>
+    	
+ <div class="subNav">
+ </div>
+</div>
+
+
 <div class="contents">
   <div class="mainContentsColumnContainer">
   	<div class="sidebarColumnContainer">
@@ -222,9 +233,6 @@
 		<li>Переменная <code>$logo</code>:&nbsp;<?php print $logo; ?></li>
 		<li>Переменная <code>$base_path</code>:&nbsp;<?php print $base_path; ?></li>
 		</ul>
-		<pre>
-		<?php print $styles; ?>
-		</pre>
 	<?php endif; ?>
 	
 	
@@ -241,12 +249,6 @@
         <?php print $content_bottom; ?>
 
       </div></div> <!-- /.section, /#content -->
-
-      
-
-      <?php print $sidebar_first; ?>
-
-      <?php print $sidebar_second; ?>
 
     </div></div> <!-- /#main, /#main-wrapper -->
 

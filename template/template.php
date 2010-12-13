@@ -121,6 +121,21 @@ function dkcenter_preprocess_node(&$variables) {
 	$variables['projectHeader'] = $node->field_project_header[0]['safe']; // Project header (h2 header)
 	$variables['projectID'] = $node->nid; // Project identificator, using in id= tag
 	$variables['projectSummary'] = $node->teaser; // Teaser for the frontpage
+	
+	// Variables of Image
+	$variables['projectImage_filename'] = $node->field_project_image[0]['filename'];
+	$variables['projectImage_filepath'] = $node->field_project_image[0]['filepath'];
+	$variables['projectImage_alt'] = $node->field_project_image[0]['data']['alt'];
+	$variables['projectImage_title'] = $node->field_project_image[0]['data']['title'];
+	
+	$variables['projectCaption'] = $node->field_project_caption[0]['safe'];
+	$variables['projectCitation'] = $node->field_project_citation[0]['safe'];
+	
+	// Variables of citationImage
+	$variables['projectCitationImage_filename'] = $node->field_project_citation_image[0]['filename'];
+	$variables['projectCitationImage_filepath'] = $node->field_project_citation_image[0]['filepath'];
+	$variables['projectCitationImage_alt'] = $node->field_project_citation_image[0]['data']['alt'];
+	$variables['projectCitationImage_title'] = $node->field_project_citation_image[0]['data']['title'];
 }
 
 

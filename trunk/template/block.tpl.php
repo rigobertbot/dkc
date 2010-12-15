@@ -1,5 +1,5 @@
 <?php
-// $Id: block.tpl.php,v 1.4 2007/09/01 05:42:48 dries Exp $
+// $Id: block.tpl.php,v 0.1 2019/12/14 20:42:48 Dmitry Tretyakov Exp $
 
 /**
  * @file block.tpl.php
@@ -26,6 +26,4 @@
  * @see template_preprocess_block()
  */
 ?>
-<div class="<?php print $block->subject; ?>">
-    <?php print $block->content ?>
-</div>
+<?php print $block->content ?>

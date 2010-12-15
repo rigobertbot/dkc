@@ -136,6 +136,17 @@ function dkcenter_preprocess_node(&$variables) {
 	$variables['projectCitationImage_filepath'] = $node->field_project_citation_image[0]['filepath'];
 	$variables['projectCitationImage_alt'] = $node->field_project_citation_image[0]['data']['alt'];
 	$variables['projectCitationImage_title'] = $node->field_project_citation_image[0]['data']['title'];
+	
+	
+	// Variables of s3Slideshow SLIDESHOW for FRONT PAGE
+	$variables['s3slideshow_filename'] = $node->field_s3slideshow_image[0]['filename'];
+	$variables['s3slideshow_filepath'] = $node->field_s3slideshow_image[0]['filepath'];
+	$variables['s3slideshow_alt'] = $node->field_s3slideshow_image[0]['data']['alt'];
+	$variables['s3slideshow_title'] = $node->field_s3slideshow_image[0]['data']['title'];
+	
+	$variables['s3slideshow_header'] = $node->field_s3slideshow_header[0]['safe'];
+	$variables['s3slideshow_caption'] = $node->field_s3slideshow_caption[0]['safe'];
+	$variables['s3slideshow_link'] = $node->field_s3slideshow_link[0]['safe'];
 }
 
 

@@ -1,5 +1,5 @@
 <?php
-// $Id: node.tpl.php,v 0.6.4.1 2010/12/10 12:48:33 talbot Exp $
+// $Id: node-s3slideshow.tpl.php,v 0.2.3 2010/12/15 04:48:33 talbot Exp $
 
 /**
  * @file node.tpl.php
@@ -48,26 +48,17 @@
  * @see template_preprocess_node()
  */
 ?>
-<div id="node-<?php print $node->nid; ?>" class="node<?php if ($sticky) { print ' sticky'; } ?><?php if (!$status) { print ' node-unpublished'; } ?> clear-block">
 
-<?php print $picture ?>
+<?php 
+/*
+ * Здесь описывается оформление ноды слайдшоу
+ */
+?>
 
-<?php if (!$page): ?>
-  <h2><a href="<?php print $node_url ?>" title="<?php print $title ?>"><?php print $title ?></a></h2>
-<?php endif; ?>
-
-  <div class="meta">
-  <?php if ($submitted): ?>
-    <span class="submitted"><?php print $submitted ?></span>
-  <?php endif; ?>
-
-  <?php if ($terms): ?>
-    <div class="terms terms-inline"><?php print $terms ?></div>
-  <?php endif;?>
-  </div>
-
-  <div class="content">
-    <?php print $content ?>
-  </div>
-  
-</div>
+<li class="sliderImage">
+	<img src="http://dkz.neezyl.com/<?php print $s3slideshow_filepath; ?>" alt="<?php print $s3slideshow_alt; ?>" title="<?php print $s3slideshow_title; ?>" />
+		<div class="bottom">
+			<h3><a href="<?php print $s3slideshow_link; ?>"><?php print $s3slideshow_header; ?></a></h3>
+			<a href="<?php print $s3slideshow_link; ?>"><?php print $s3slideshow_caption; ?></a>
+		</div>
+</li>

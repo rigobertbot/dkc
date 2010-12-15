@@ -1,6 +1,5 @@
-﻿<?php
+<?php
 // $Id: page.tpl.php,v 1.26.2.3 2010/06/26 15:36:04 johnalbin Exp $
-
 /**
  * @file
  * Theme implementation to display a single Drupal page.
@@ -110,18 +109,32 @@
  */
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php print $language->language; ?>" lang="<?php print $language->language; ?>" dir="<?php print $language->dir; ?>">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php print $language->language; ?>" lang="<?php print $language->language; ?>">
 
 <head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
   <title><?php print $head_title; ?></title>
   <?php print $head; ?>
 <base href="http://dkz.neezyl.com<?php print $base_path.$directory;?>/" />
-<link type="text/css" rel="stylesheet" media="all"  href="/sites/all/themes/dkcenter/css/reset.css" />
-<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/dkcenter/css/common.css" />
-<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/dkcenter/css/front-page.css" />
 <link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/dkcenter/css/style.css" />
 <link type="text/css" rel="stylesheet" media="print" href="/sites/all/themes/dkcenter/css/print.css?B" />
-  <?php print $scripts; ?>
+
+<script type="text/javascript" src="/sites/all/themes/dkcenter/js/iexplorer.js"></script>
+
+<?php if ($is_front): ?>
+<script type="text/javascript" src="/sites/all/themes/dkcenter/js/jquery.js"></script>
+
+<script type="text/javascript" src="/sites/all/themes/dkcenter/js/s3Slider.js"></script>
+
+<script type="text/javascript">
+	 $(document).ready(function() {
+		 $('#slider').s3Slider({
+			 timeOut: 5000
+		 });
+	 });
+</script>
+<?php endif; ?>
+  
 </head>
 <body>
 	<!-- Header_Image region -->
@@ -130,29 +143,18 @@
 	<!-- Main Horizontal menu -->
 	<?php if ($menu_region): ?>
 		<div class="menu">
-		   <?php print theme(array('links__system_main_menu', 'links'), $primary_links,
-            array(
-              'id' => 'main-menu',
-              'class' => 'links clearfix',
-            ),
-            array(
-              'text' => t('Main Menu'),
-              'level' => 'h2',
-              'class' => 'element-invisible',
-            ));
-          ?>
-
-      	</div>
-    <?php endif; ?>
+			<?php print $menu_region; ?>
+		</div>
+	<?php endif; ?>
 		
 		
-<!-- Front page Regions and Data -->
+<!-- FRONT PAGE Regions and Data -->
 
 <?php if ($is_front): ?>	
  <!-- Logotype and main site header -->
  <div class="header">
 		<div id="mainHeaderContainer">
-			<a href="http://talbothouse.local/~talbot" title="<?php print t('Home'); ?>" rel="home" id="logo">
+			<a href="http://dkz.neezyl.com" title="<?php print t('Home'); ?>" rel="home" id="logo">
 				<img class="logotype" src="<?php print $logo; ?>" 
 				alt="<?php print t('Home'); ?>"  />
 			</a>
@@ -184,7 +186,7 @@
 			
 			<hr id="mainPageLine" />
     		
-    		<img id="sunImage" src="<?php print $base_path.$directory;?>./images/sunImage.png" alt="#" />
+    		<img id="sunImage" src="images/sunImage.png" alt="#" />
     		
     		<?php print $content_news; ?>
 		
@@ -232,54 +234,13 @@
 		<li>Переменная <code>$site_name</code>:&nbsp;<?php print $site_name; ?></li>
 		<li>Переменная <code>$logo</code>:&nbsp;<?php print $logo; ?></li>
 		<li>Переменная <code>$base_path</code>:&nbsp;<?php print $base_path; ?></li>
-		</ul>
+		</ul>		
 	<?php endif; ?>
 	
 	
 	<!-- Blocks adding and other things -->
 	
-	 <div id="main-wrapper"><div id="main" class="clearfix<?php if ($primary_links || $navigation) { print ' with-navigation'; } ?>">
-
-      <div id="content" class="column"><div class="section">
-        <?php print $messages; ?>
-        <?php if ($tabs): ?>
-          <div class="tabs"><?php print $tabs; ?></div>
-        <?php endif; ?>
-        <?php print $help; ?>
-        <?php print $content_bottom; ?>
-
-      </div></div> <!-- /.section, /#content -->
-
-    </div></div> <!-- /#main, /#main-wrapper -->
-
-    <?php if ($footer || $footer_message || $secondary_links): ?>
-      <div id="footer"><div class="section">
-
-        <?php print theme(array('links__system_secondary_menu', 'links'), $secondary_links,
-          array(
-            'id' => 'secondary-menu',
-            'class' => 'links clearfix',
-          ),
-          array(
-            'text' => t('Secondary menu'),
-            'level' => 'h2',
-            'class' => 'element-invisible',
-          ));
-        ?>
-
-        <?php if ($footer_message): ?>
-          <div id="footer-message"><?php print $footer_message; ?></div>
-        <?php endif; ?>
-
-        <?php print $footer; ?>
-
-      </div></div> <!-- /.section, /#footer -->
-    <?php endif; ?>
-
-<!-- /#page, /#page-wrapper -->
-	
-	
-  
+	 
   <?php print $page_closure; ?>
 
   <?php print $closure; ?>

@@ -48,47 +48,36 @@
  * @see template_preprocess_node()
  */
 ?>
-
 <?php 
 /*
  * Здесь описывается оформление ноды на самой странице проекта
  */
 ?>
-
 <?php if ($page): ?>
- 	<h2><?php print $projectHeader; ?></h2>
-	<div class="aboutProject"><?php print $projectBody; ?></div>
-	<div class="rightImage">
-	<?php if ($projectImage_filepath): ?>
-	<img src="http://dkz.neezyl.com/<?php print $projectImage_filepath; ?>" alt="<?php print $projectImage_alt; ?>" title="<?php print $projectImage_title; ?>" />
-	<?php endif; ?>
-	<?php print $projectCaption; ?>
-	</div>
-	<div class="citation">
-	<?php if ($projectCitationImage_filepath): ?>
-	<img src="http://dkz.neezyl.com/<?php print $projectCitationImage_filepath; ?>" alt="<?php print $projectCitationImage_alt; ?>" title="<?php print $projectCitationImage_title; ?>" />
-	<?php endif; ?>
-	<?php print $projectCitation; ?>
-	</div>
-	
+ <h2><?php print $projectHeader; ?></h2>
+ <div class="aboutProject"><?php print $projectBody; ?></div>
+ <div class="rightImage">
+ <?php if ($projectImage_filepath): ?>
+  <img src="http://dkz.neezyl.com/<?php print $projectImage_filepath; ?>" alt="<?php print $projectImage_alt; ?>" title="<?php print $projectImage_title; ?>" />
+ <?php endif; ?>
+ <?php print $projectCaption; ?></div>
+ <div class="citation">
+ <?php if ($projectCitationImage_filepath): ?>
+  <img src="http://dkz.neezyl.com/<?php print $projectCitationImage_filepath; ?>" alt="<?php print $projectCitationImage_alt; ?>" title="<?php print $projectCitationImage_title; ?>" />
+ <?php endif; ?>
+ <?php print $projectCitation; ?></div>
 <?php endif; ?>
-
 
 <?php
 /*
  * Здесь описывается оформление тизера для главной страницы
  */
 ?>
-
 <?php if ($teaser): ?>
 <div class="project" id="project<?php print $projectID; ?>">
-	<h3><a href="<?php print $node_url ?>" title="<?php print $title ?>">
-		<?php print $title; ?></a></h3>
-	<?php print $projectSummary; ?>
-	
-	<?php if ($terms): ?>
-    <div class="terms terms-inline"><?php print $terms; ?></div>
-  <?php endif;?>
-	
-</div>
+ <h3><a href="<?php print $node_url ?>" title="<?php print $title ?>"><?php print $title; ?></a></h3>
+<?php print $projectSummary; ?>
+<?php if ($terms): ?>
+<div class="terms terms-inline"><?php print $terms; ?></div>
+<?php endif;?></div>
 <?php endif; ?>

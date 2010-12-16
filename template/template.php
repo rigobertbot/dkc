@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 // $Id: template.php,v 1.21 2009/08/12 04:25:15 johnalbin Exp $
 
 /**
@@ -119,7 +119,7 @@ function dkcenter_preprocess_node(&$variables) {
 	$variables['projectTitle'] = $node->title; // Title of the Project
 	$variables['projectBody'] = $node->content['body']['#value']; // Main project text, HTML possible
 	$variables['projectHeader'] = $node->field_project_header[0]['safe']; // Project header (h2 header)
-	$variables['projectID'] = $node->nid; // Project identificator, using in id= tag
+	$variables['projectID'] = $node->field_project_number[0]['value']; // Project identificator, using in id= tag
 	$variables['projectSummary'] = $node->teaser; // Teaser for the frontpage
 	
 	// Variables of Image

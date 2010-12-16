@@ -174,7 +174,6 @@
   <div class="projectsContainer">
   	<?php print $content_left; ?>
   </div>
- </div>
  
 	<!-- Right column container -->
 		<div class="meltedContentsContainer">
@@ -229,12 +228,7 @@
 	
 	<!-- Footer -->
 	<?php if ($site_footer): ?>
-		<ul>
-		<li>Переменная <code>$directory</code>:&nbsp;<?php print $directory; ?></li>
-		<li>Переменная <code>$site_name</code>:&nbsp;<?php print $site_name; ?></li>
-		<li>Переменная <code>$logo</code>:&nbsp;<?php print $logo; ?></li>
-		<li>Переменная <code>$base_path</code>:&nbsp;<?php print $base_path; ?></li>
-		</ul>		
+	
 	<?php endif; ?>
 	
 	

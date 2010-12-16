@@ -166,8 +166,8 @@ div.menu	{
 		
 		ul.menu li:first-child { border: 0px; }
 		
-		ul.menu li + li + li + li + li  { width: 282px; }
-		ul.menu li + li + li + li + li + li  { width: 138px; }
+		ul.menu li + li + li + li + li.nolink-li  { width: 282px; }
+		ul.menu li + li + li + li + li + li.nolink-li { width: 138px; }
 
 		ul.menu li ul{
 			list-style:none;
@@ -187,6 +187,7 @@ div.menu	{
 			line-height: 27px;
 			margin:0;
 			padding-right: 4px;
+			font-size:14px;
 			text-align:left;
 			text-indent: 2px;
 			background:#7DABCF;
@@ -384,6 +385,15 @@ div.rightWrapper p + p {
 		border-left:8px solid #C7288B;
 	}
 	
+	div.project h3 a { 
+		text-decoration:none;
+		color:#000;
+		}
+	div.project h3 a:hover { 
+		text-decoration:underline;
+		color: #666;
+		}
+	
 	div.project h3, div.project p {
 		padding-left:4px;
 	}
@@ -499,8 +509,9 @@ div.rightWrapper p + p {
 	div.projectsContainer2 {
 		float:left;
 		width:272px;
+		margin:0;
+		padding:0;
 		margin-right:12px;
-		margin-top:-18px;
 	}
 	
 	div.banners {

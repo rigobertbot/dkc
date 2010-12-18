@@ -562,6 +562,15 @@ div.rightWrapper p + p {
 		border-left: 8px solid #7DABCF;
 	}
 	
+	div.news h3 a { 
+		text-decoration:none;
+		color:#000;
+		}
+	div.news h3 a:hover { 
+		text-decoration:underline;
+		color: #666;
+		}
+	
 	div.news h3, div.news p {
 		padding-left:4px;
 	}

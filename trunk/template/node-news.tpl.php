@@ -1,5 +1,5 @@
 <?php
-// $Id: node-projects.tpl.php,v 0.6.3 2010/12/10 14:48:33 talbot Exp $
+// $Id: node-news.tpl.php,v 0.6.3 2010/12/16 18:48:33 talbot Exp $
 
 /**
  * @file node.tpl.php
@@ -50,27 +50,20 @@
 ?>
 <?php 
 /*
- * Здесь описывается оформление ноды на самой странице проекта
+ * Здесь описывается оформление ноды на самой странице новости
  */
 ?>
 <?php if ($page): ?>
- <h2><?php print $projectHeader; ?></h2>
- <div class="aboutProject"><?php print $projectBody; ?></div>
- <?php if ($projectImage_filename): ?>
+ <h2><?php print $newsTitle; ?></h2>
+ <div class="aboutProject"><?php print $newsBody; ?></div>
  <div class="rightImage">
-  <img src="http://dkz.neezyl.com/<?php print $projectImage_filepath; ?>" alt="<?php print $projectImage_alt; ?>" title="<?php print $projectImage_title; ?>" /></div>
+ <?php if ($newsImage_filepath): ?>
+  <img src="http://dkz.neezyl.com/<?php print $newsImage_filepath; ?>" alt="<?php print $newsImage_alt; ?>" title="<?php print $newsImage_title; ?>" />
  <?php endif; ?>
- <?php if ($projectCaption): ?>
- <div class="caption"><?php print $projectCaption; ?></div>
+ <?php if ($newsCaption): ?>
+ <div class="caption"><?php print $newsCaption; ?></div>
  <?php endif; ?>
- <?php if ($projectCitation): ?>
- <div class="citation">
- <?php if ($projectCitationImage_filename): ?>
-  <img src="http://dkz.neezyl.com/<?php print $projectCitationImage_filepath; ?>" alt="<?php print $projectCitationImage_alt; ?>" title="<?php print $projectCitationImage_title; ?>" />
- <?php endif; ?>
- <?php print $projectCitation; ?></div>
- <?php endif; ?>
-<?php endif; ?>
+ <? endif; ?>
 
 <?php
 /*
@@ -78,8 +71,8 @@
  */
 ?>
 <?php if ($teaser): ?>
-<div class="project" id="project<?php print $projectID; ?>">
- <h3><a href="<?php print $node_url ?>" title="<?php print $title ?>"><?php print $title; ?></a></h3>
-<?php print $projectSummary; ?>
+<div class="news" id="news_<?php print $newsID; ?>">
+ <h3><a href="<?php print $node_url ?>" title="<?php print $newsTitle ?>"><?php print $newsTitle; ?></a></h3>
+<?php print $newsSummary; ?>
 </div>
 <?php endif; ?>

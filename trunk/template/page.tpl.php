@@ -152,51 +152,54 @@
 
 <?php if ($is_front): ?>	
  <!-- Logotype and main site header -->
- <div class="header">
-		<div id="mainHeaderContainer">
-			<a href="http://dkz.neezyl.com" title="<?php print t('Home'); ?>" rel="home" id="logo">
-				<img class="logotype" src="<?php print $logo; ?>" 
-				alt="<?php print t('Home'); ?>"  />
-			</a>
-			
-			<p id="upheader"><?php print $site_slogan; ?></p>
-			
-			<h1>
-				<a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home">
-					<?php print $site_name; ?>
-				</a>
-			</h1>
-		</div>      
-	</div>	
+<div class="header">
+ <div id="mainHeaderContainer">
+	<a href="http://dkz.neezyl.com" title="<?php print t('Home'); ?>" rel="home" id="logo">
+	 <img class="logotype" src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
+	</a>
+	<p id="upheader"><?php print $site_slogan; ?></p>
+	<h1><a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><?php print $site_name; ?></a></h1>
+</div>
+
+ <div class="subNav">
+	<?php print $site_header; ?></div>
+</div>	
  
- <!-- Left column container -->
- <div class="contents">
-  <div class="projectsContainer">
+<!-- Left column container -->
+<div class="contents">
+	<div class="projectsContainer">
   	<?php print $content_left; ?>
   </div>
  
-	<!-- Right column container -->
-		<div class="meltedContentsContainer">
-			<?php print $content_right; ?>
-		</div>	
-	<!-- News container -->
-	<?php if ($content_news): ?>
-		<div class="newsContentsContainer">
-			
-			<hr id="mainPageLine" />
-    		
-    		<img id="sunImage" src="images/sunImage.png" alt="#" />
-    		
-    		<?php print $content_news; ?>
-		
-		</div>
-	<?php endif; ?>
-	<!-- End of front page -->
-<? endif; ?>
+<!-- Right column container -->
+	<div class="meltedContentsContainer">
+	<?php print $content_right; ?>
+	</div>
+
+<?php if ($content_news): ?>
+<!-- News container -->
+<div class="newsContentsContainer">
+	<hr id="mainPageLine" />
+	<img id="sunImage" src="images/sunImage.png" alt="#" />
+	<div class="newsWrapper">
+		<?php print $content_news; ?>
+	</div>
 	
-<!-- NO FRONT PAGE -->	
-	
-<?php if(!$is_front): ?>
+	<img src="images/children.png" alt="#" />
+</div>
+<?php endif; ?>
+
+</div>
+
+<?php 
+/*
+ * End of front page 
+ */ 
+endif; ?>		
+<?php 
+// NO FRONT PAGE
+if(!$is_front): 
+?>
 
 <div class="header">
  <div id="mainHeader">
@@ -204,7 +207,7 @@
  </div>
     	
  <div class="subNav">
- </div>
+ <?php print $site_header; ?></div>
 </div>
 
 
@@ -222,22 +225,33 @@
   </div>
 </div>
 </div>
+
 <?php endif; ?>
-	
-	
-	
-	<!-- Footer -->
-	<?php if ($site_footer): ?>
-	
-	<?php endif; ?>
-	
-	
-	<!-- Blocks adding and other things -->
-	
-	 
-  <?php print $page_closure; ?>
+<?php 
+// FOOTER
+if ($site_footer): 
+?>
+<div class="footer">
+ <hr />
+ <div class="footerContents">	
+	<div class="leftWrapper">
+	 <p class="footerNav"><a href="#" title="Гостевая книга">ГОСТЕВАЯ КНИГА</a></p>
+	 <p class="footerNav"><a href="#" title="Вестник ДКЦ">ГАЗЕТА &laquo;ВЕСТНИК ДКЦ&raquo;</a></p>
+	</div>
+ 
+	<div class="copyright">
+	 <p class="footerNav">&copy;&nbsp;ДЕТСКИЙ КРИЗИСНЫЙ ЦЕНТР, г. САНКТ-ПЕТЕРБУРГ</p>
+	</div>
+ 
+	<div class="rightWrapper">
+	 <p class="footerNav"><a href="#" title="Гостевая книга">КАРТА САЙТА</a></p>
+	 <p class="footerNav"><a href="#" title="Вестник ДКЦ">КОНТАКТЫ</a></p>
+	</div>
+ </div>
+</div>
 
-  <?php print $closure; ?>
-
+<?php endif; ?>
+<?php print $page_closure; ?>
+<?php print $closure; ?>
 </body>
 </html>

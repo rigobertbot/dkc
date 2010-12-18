@@ -147,6 +147,19 @@ function dkcenter_preprocess_node(&$variables) {
 	$variables['s3slideshow_header'] = $node->field_s3slideshow_header[0]['safe'];
 	$variables['s3slideshow_caption'] = $node->field_s3slideshow_caption[0]['safe'];
 	$variables['s3slideshow_link'] = $node->field_s3slideshow_link[0]['safe'];
+	
+	
+	// Variables for NEWS
+	$variables['newsTitle'] = $node->title;
+	$variables['newsBody'] = $node->content['body']['#value'];
+	$variables['newsSummary'] = $node->teaser;
+	$variables['newsID'] = $node->nid;
+	// News IMAGES
+	$variables['newsImage_filename'] = $node->field_news_image[0]['filename'];
+	$variables['newsImage_filepath'] = $node->field_news_image[0]['filepath'];
+	$variables['newsImage_alt'] = $node->field_news_image[0]['data']['alt'];
+	$variables['newsImage_title'] = $node->field_news_image[0]['data']['title'];
+	
 }
 
 

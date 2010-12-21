@@ -217,6 +217,10 @@ if(!$is_front):
     	
     		<!-- Панель с навигацией слева -->
 				<div class="sidebar">
+				<?php if (isset($secondary_links)): ?>
+					<?php print theme('links', $secondary_links, array('class'=>'secondary-links')); ?>
+				<?php endif; ?>
+				
 				</div>
   
   	<div class="mainContents">

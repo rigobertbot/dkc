@@ -1,5 +1,5 @@
 <?php
-// $Id: node.tpl.php,v 0.6.4.1 2010/12/10 12:48:33 talbot Exp $
+// $Id: node-webform.tpl.php,v 0.2.3 2010/12/20 18:48:33 talbot Exp $
 
 /**
  * @file node.tpl.php
@@ -48,28 +48,29 @@
  * @see template_preprocess_node()
  */
 ?>
-<div id="node-<?php print $node->nid; ?>" class="node<?php if ($sticky) { print ' sticky'; } ?><?php if (!$status) { print ' node-unpublished'; } ?> clear-block">
-
-<?php print $picture ?>
-
-<?php if (!$page): ?>
-  <h2><a href="<?php print $node_url ?>" title="<?php print $title ?>"><?php print $title ?></a></h2>
+<?php 
+/*
+ * Здесь описывается оформление ноды на странице заявки
+ */
+?>
+<?php if ($page): ?>
+ <h2><?php print $formHeader; ?></h2>
+ <div class="aboutProject"><?php print $formBody; ?></div>
+ <?php if ($formImage_filename): ?>
+ <div class="rightImage">
+  <img src="http://dkz.neezyl.com/<?php print $formImage_filepath; ?>" alt="<?php print $formImage_alt; ?>" title="<?php print $formImage_title; ?>" /></div>
+ <?php endif; ?>
+ <?php if ($formCaption): ?>
+ <div class="caption"><?php print $formCaption; ?></div>
+ <?php endif; ?>
+ 
+ <?php
+ // Описываем саму форму
+ if ($submitted):
+ ?>  
+ <div class="formClass">
+ 	<h3>Оставьте заявку, чтобы стать волонтёром</h3>
+ 	<?php print $node->content['webform']['#value']; ?>
+ </div>
+ <?php endif; ?>
 <?php endif; ?>
-
-  <div class="meta">
-  <?php if ($submitted): ?>
-    <span class="submitted"><?php print $submitted ?></span>
-  <?php endif; ?>
-
-  <?php if ($terms): ?>
-    <div class="terms terms-inline"><?php print $terms ?></div>
-  <?php endif;?>
-  </div>
-
-  <div class="content">
-    <?php print $content ?>
-    
-    <div><pre><?php print_r ($node); ?></pre></div>
-  </div>
-  
-</div>

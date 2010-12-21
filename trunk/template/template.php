@@ -160,6 +160,15 @@ function dkcenter_preprocess_node(&$variables) {
 	$variables['newsImage_alt'] = $node->field_news_image[0]['data']['alt'];
 	$variables['newsImage_title'] = $node->field_news_image[0]['data']['title'];
 	
+	// Variables for WEBFORMS
+	$variables['formTitle'] = $node->title;
+	$variables['formHeader'] = $node->field_webform_header[0]['safe'];
+	$variables['formBody'] = $node->content['body']['#value'];
+	$variables['formImage_filename'] = $node->field_webform_image[0]['filename'];
+	$variables['formImage_filepath'] = $node->field_webform_image[0]['filepath'];
+	$variables['formImage_alt'] = $node->field_webform_image[0]['data']['alt'];
+	$variables['formImage_title'] = $node->field_webform_image[0]['data']['title'];
+	$variables['formCaption'] = $node->field_webform_caption[0]['safe'];
 }
 
 

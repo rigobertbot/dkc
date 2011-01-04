@@ -71,7 +71,7 @@ abbr, acronym {
 
 body {
 	font-stretch:inherit;
-	background-image:url(../images/grid.gif);
+	background-image:url(../images/background.jpg);
 	background-repeat-x:repeat;
 	background-repeat-y:repeat;
 	background-repeat:repeat;
@@ -138,7 +138,7 @@ div.menu	{
 			}
 			
 			
-		ul.menu{
+div.menu ul {
 			list-style:none;
 			padding:0;
 			margin:0;
@@ -148,7 +148,7 @@ div.menu	{
 			z-index:100;
 			display:block;
 		}
-		ul.menu li{
+div.menu ul li{
 			display: block;
 			float:left;
 			height:27px;
@@ -164,12 +164,12 @@ div.menu	{
 			font-family:Lucida, 'Lucida Grande', Helvetica, Verdana, sans-serif;
 		}
 		
-		ul.menu li:first-child { border: 0px; }
+div.menu ul li:first-child { border: 0px; }
 		
-		ul.menu li + li + li + li + li.nolink-li  { width: 282px; }
-		ul.menu li + li + li + li + li + li.nolink-li { width: 138px; }
+div.menu ul li + li + li + li + li.nolink-li  { width: 282px; }
+div.menu ul li + li + li + li + li + li.nolink-li { width: 138px; }
 
-		ul.menu li ul{
+div.menu ul li ul{
 			list-style:none;
 			padding:0px;
 			margin:0;
@@ -179,7 +179,7 @@ div.menu	{
 			top:27px;
 		}
 		
-		ul.menu li ul li{
+div.menu ul li ul li{
 			float:none;
 			display:block;
 			position: relative;
@@ -200,11 +200,11 @@ div.menu	{
 			white-space: nowrap;
 		}
 		
-		ul.menu li ul li:first-child {margin-top:2px; }
+div.menu ul li ul li:first-child {margin-top:2px; }
 		
 		li.wide ul li {width: 282px !important; padding: 0px !important; }
 		
-		ul.menu li a{
+div.menu ul li a{
 			display:block;
 			height:27px;
 			border:0px;
@@ -213,16 +213,16 @@ div.menu	{
 			text-decoration:none;
 			font-weight: bold;
 		}
-		ul.menu li:hover ul, ul.menu li.jshover ul{
+div.menu ul li:hover ul, div.menu ul li.jshover ul{
 			display:block;
 			margin:0;
 			text-align:left;
 		}
-		ul.menu li:hover, ul.menu li.jshover{
+div.menu ul li:hover, div.menu ul li.jshover{
 			background:#7DABCF;
 		}
 		
-		ul.menu li ul.lastMenuItem { position: absolute; left:-33px;}
+div.menu ul li ul.lastMenuItem { position: absolute; left:-33px;}
 		
 /* End of MENU Section */
 
@@ -294,6 +294,7 @@ div.footer {
 	margin:0;
 	margin-left:auto;
 	margin-right:auto;
+	margin-bottom:36px;
 }
 
 	div.footer hr {
@@ -598,9 +599,10 @@ div.mainContentsColumnContainer {
 	float:left;
 	width:100%;
 	overflow:hidden;
-	background:#FFF; /* column 2 background colour */
 	margin-top:20px;
 	margin-bottom:36px;
+	background-image:url(../images/grid.gif);
+	background:#FFF;
 
 
 }
@@ -609,21 +611,21 @@ div.sidebarColumnContainer {
 	width:100%;
 	position:relative;
 	right:-140px;
-	background-image:url(images/grid.gif); /* column 1 background colour */
+	background-image:url(../images/background.jpg); /* column 1 background colour */
 	border-left:2px solid #7DABCF;
 }
 
 /* Left navigation bar */
+
 div.sidebar {
 	float:left;
 	width:134px;
 	position:relative;
 	left:-138px;;
-	overflow:hidden;
 	margin-top:18px;
 }
 
-div.sidebar a {
+div.sidebar ul li a {
 	display:block;
 	font-size:14px;
 	line-height:18px;
@@ -636,7 +638,7 @@ div.sidebar a {
 	
 }
 
-div.sidebar a:hover {
+div.sidebar ul li a:hover {
 	font-size:14px;
 	line-height:18px;
 	margin-bottom:18px;
@@ -646,6 +648,31 @@ div.sidebar a:hover {
 	color:#FFF;
 	background-color:#7DABCF;
 }
+
+div.sidebar ul li.active-trail a {
+	display:block;
+	font-size:14px;
+	line-height:18px;
+	padding:0 2px;
+	margin-bottom:18px;
+	font-weight:bold;
+	border-bottom:1px solid #7DABCF;
+	text-decoration:none;
+	color:#FFF;
+	background-color:#7DABCF;
+}
+
+div.sidebar ul li.active-trail a:hover {
+	font-size:14px;
+	line-height:18px;
+	margin-bottom:18px;
+	font-weight:bold;
+	border-bottom:1px solid #7DABCF;
+	text-decoration:none;
+	color:#FFF;
+	background-color:#7DABCF;
+}
+
 
 div.mainContents {
 	float:left;
@@ -676,6 +703,8 @@ div.rightImage {
 
 div.citation {
 	clear:both;
+	height:auto !important;
+	min-height:100px;
 	background-color:#CBDDEC;
 	border: 1px solid #7DABCF;
 	padding:8px;
@@ -684,16 +713,24 @@ div.citation {
 }
 
 div.citation img {
+	width:100px;
+	height:100px;
 	float:left;
 }
 
 div.citation p {
-	margin-left:80px;
-	font-size:14px;
+	padding-left:120px;
+	font-size:12px;
 	line-height:18px;
 	font-weight:bold;
 }
 
+div.citation p + p {
+ font-weight:normal;
+ font-style:italic;
+ text-align:right;
+ padding-top:18px;
+}
 
 /* Table styles */
 
@@ -800,5 +837,44 @@ input.form-submit {
 	width:192px;
 	height:auto;
 	font-size:14px;
+	font-weight:bold;
+}
+
+
+
+/**
+ * All styles for inline using
+ *
+ */
+ 
+div.aboutProject ul {
+ list-style-type: disc;
+ list-style-position: outside; 
+ }
+
+div.aboutProject ul li {
+ list-style-image: none;
+ list-style-type: disc;
+ list-style-position: outside; 
+ }
+ 
+ div.aboutProject ol {
+ list-style-type: decimal;
+ list-style-position: outside; 
+ }
+
+div.aboutProject ol li {
+ list-style-image: none;
+ list-style-type: decimal;
+ list-style-position: outside; 
+ }
+ 
+ div.aboutProject p {
+	text-indent:1em;
+	}
+ 
+ 
+ 
+div.aboutProject strong {
 	font-weight:bold;
 }

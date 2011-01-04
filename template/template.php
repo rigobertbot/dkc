@@ -150,7 +150,7 @@ function dkcenter_preprocess_node(&$variables) {
 	
 	
 	// Variables for NEWS
-	$variables['newsTitle'] = $node->title;
+	$variables['newsTitle'] = $node->field_news_header[0]['safe']; //News Header Title
 	$variables['newsBody'] = $node->content['body']['#value'];
 	$variables['newsSummary'] = $node->teaser;
 	$variables['newsID'] = $node->nid;
@@ -169,6 +169,26 @@ function dkcenter_preprocess_node(&$variables) {
 	$variables['formImage_alt'] = $node->field_webform_image[0]['data']['alt'];
 	$variables['formImage_title'] = $node->field_webform_image[0]['data']['title'];
 	$variables['formCaption'] = $node->field_webform_caption[0]['safe'];
+	
+	// And THE LAST - variables for COMMON CONTENT
+	$variables['commonTitle'] = $node->title;
+	$variables['commonHeader'] = $node->field_common_header[0]['safe'];
+	$variables['commonBody'] = $node->content['body']['#value'];
+	$variables['commonImage_filename'] = $node->field_common_image[0]['filename'];
+	$variables['commonImage_filepath'] = $node->field_common_image[0]['filepath'];
+	$variables['commonImage_alt'] = $node->field_common_image[0]['data']['alt'];
+	$variables['commonImage_title'] = $node->field_common_image[0]['data']['title'];
+	$variables['commonCaption'] = $node->field_common_caption[0]['safe'];
+	
+	// Variables for INLINE IMAGES
+	$variables['commonInlineImage_filename'] = $node->field_common_inline_image[0]['filename'];
+	$variables['commonInlineImage_filepath'] = $node->field_common_inline_image[0]['filepath'];
+	$variables['commonInlineImage_alt'] = $node->field_common_inline_image[0]['data']['alt'];
+	$variables['commonInlineImage_title'] = $node->field_common_inline_image[0]['data']['title'];
+	$variables['commonInlineImage_caption'] = $node->field_common_inline_image[0]['data']['title'];
+	
+	// Variables for TABLES will going further
+	
 }
 
 

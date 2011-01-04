@@ -58,11 +58,12 @@
  <div class="aboutProject"><?php print $newsBody; ?></div>
  <div class="rightImage">
  <?php if ($newsImage_filepath): ?>
-  <img src="http://dkz.neezyl.com/<?php print $newsImage_filepath; ?>" alt="<?php print $newsImage_alt; ?>" title="<?php print $newsImage_title; ?>" />
+  <img src="http://deticenter.org/<?php print $newsImage_filepath; ?>" alt="<?php print $newsImage_alt; ?>" title="<?php print $newsImage_title; ?>" />
  <?php endif; ?>
  <?php if ($newsCaption): ?>
  <div class="caption"><?php print $newsCaption; ?></div>
  <?php endif; ?>
+  <?php print theme('pager'); ?>
  <? endif; ?>
 
 <?php

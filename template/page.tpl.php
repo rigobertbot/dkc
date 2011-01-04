@@ -1,5 +1,5 @@
 <?php
-// $Id: page.tpl.php,v 1.26.2.3 2010/06/26 15:36:04 johnalbin Exp $
+// $Id: page.tpl.php,v 0.8.2.3 2010/12/21 15:30:04 Dmitry Tretyakov Exp $
 /**
  * @file
  * Theme implementation to display a single Drupal page.
@@ -115,7 +115,7 @@
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
   <title><?php print $head_title; ?></title>
   <?php print $head; ?>
-<base href="http://dkz.neezyl.com<?php print $base_path.$directory;?>/" />
+<base href="http://deticenter.org<?php print $base_path.$directory;?>/" />
 <link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/dkcenter/css/style.css" />
 <link type="text/css" rel="stylesheet" media="print" href="/sites/all/themes/dkcenter/css/print.css?B" />
 
@@ -154,7 +154,7 @@
  <!-- Logotype and main site header -->
 <div class="header">
  <div id="mainHeaderContainer">
-	<a href="http://dkz.neezyl.com" title="<?php print t('Home'); ?>" rel="home" id="logo">
+	<a href="http://deticenter.org" title="<?php print t('Home'); ?>" rel="home" id="logo">
 	 <img class="logotype" src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
 	</a>
 	<p id="upheader"><?php print $site_slogan; ?></p>
@@ -217,10 +217,7 @@ if(!$is_front):
     	
     		<!-- Панель с навигацией слева -->
 				<div class="sidebar">
-				<?php if (isset($secondary_links)): ?>
-					<?php print theme('links', $secondary_links, array('class'=>'secondary-links')); ?>
-				<?php endif; ?>
-				
+				<?php print $sidebar; ?>
 				</div>
   
   	<div class="mainContents">

@@ -1,5 +1,5 @@
 <?php
-// $Id: node.tpl.php,v 0.6.4.1 2010/12/10 12:48:33 talbot Exp $
+// $Id: node-common.tpl.php,v 0.3.3 2010/12/23 23:48:33 talbot Exp $
 
 /**
  * @file node.tpl.php
@@ -48,26 +48,25 @@
  * @see template_preprocess_node()
  */
 ?>
-<div id="node-<?php print $node->nid; ?>" class="node<?php if ($sticky) { print ' sticky'; } ?><?php if (!$status) { print ' node-unpublished'; } ?> clear-block">
-
-<?php print $picture ?>
-
-<?php if (!$page): ?>
-  <h2><a href="<?php print $node_url ?>" title="<?php print $title ?>"><?php print $title ?></a></h2>
+<?php 
+/*
+ * Здесь описывается оформление ноды общих страниц
+ */
+?>
+<?php if ($page): ?>
+ <h2><?php print $commonHeader; ?></h2>
+ <div class="aboutProject"><?php print $commonBody; ?>
+	<?php if ($commonInlineImage_filename): ?>
+	 <div class="inlineImage">
+		 <img src="http://deticenter.org/<?php print $commonInlineImage_filepath; ?>" alt="<?php print $commonInlineImage_alt; ?>" title="<?php print $commonInlineImage_title; ?>" /><div class="inlineCaption"><?php print $commonInlineImage_caption; ?></div>
+	 </div>
+	<?php endif; ?>
+ </div>
+ <?php if ($commonImage_filename): ?>
+ <div class="rightImage">
+  <img src="http://deticenter.org/<?php print $commonImage_filepath; ?>" alt="<?php print $commonImage_alt; ?>" title="<?php print $commonImage_title; ?>" /></div>
+ <?php endif; ?>
+ <?php if ($commonCaption): ?>
+ <div class="caption"><?php print $commonCaption; ?></div>
+ <?php endif; ?>
 <?php endif; ?>
-
-  <div class="meta">
-  <?php if ($submitted): ?>
-    <span class="submitted"><?php print $submitted ?></span>
-  <?php endif; ?>
-
-  <?php if ($terms): ?>
-    <div class="terms terms-inline"><?php print $terms ?></div>
-  <?php endif;?>
-  </div>
-
-  <div class="content">
-    <?php print $content ?>
-  </div>
-  
-</div>

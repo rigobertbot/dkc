@@ -58,7 +58,7 @@
  <div class="aboutProject"><?php print $formBody; ?></div>
  <?php if ($formImage_filename): ?>
  <div class="rightImage">
-  <img src="http://dkz.neezyl.com/<?php print $formImage_filepath; ?>" alt="<?php print $formImage_alt; ?>" title="<?php print $formImage_title; ?>" /></div>
+  <img src="http://deticenter.org/<?php print $formImage_filepath; ?>" alt="<?php print $formImage_alt; ?>" title="<?php print $formImage_title; ?>" /></div>
  <?php endif; ?>
  <?php if ($formCaption): ?>
  <div class="caption"><?php print $formCaption; ?></div>

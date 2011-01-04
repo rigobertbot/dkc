@@ -58,7 +58,7 @@
  <div class="aboutProject"><?php print $projectBody; ?></div>
  <?php if ($projectImage_filename): ?>
  <div class="rightImage">
-  <img src="http://dkz.neezyl.com/<?php print $projectImage_filepath; ?>" alt="<?php print $projectImage_alt; ?>" title="<?php print $projectImage_title; ?>" /></div>
+  <img src="http://deticenter.org/<?php print $projectImage_filepath; ?>" alt="<?php print $projectImage_alt; ?>" title="<?php print $projectImage_title; ?>" /></div>
  <?php endif; ?>
  <?php if ($projectCaption): ?>
  <div class="caption"><?php print $projectCaption; ?></div>
@@ -66,7 +66,7 @@
  <?php if ($projectCitation): ?>
  <div class="citation">
  <?php if ($projectCitationImage_filename): ?>
-  <img src="http://dkz.neezyl.com/<?php print $projectCitationImage_filepath; ?>" alt="<?php print $projectCitationImage_alt; ?>" title="<?php print $projectCitationImage_title; ?>" />
+  <img src="http://deticenter.org/<?php print $projectCitationImage_filepath; ?>" alt="<?php print $projectCitationImage_alt; ?>" title="<?php print $projectCitationImage_title; ?>" />
  <?php endif; ?>
  <?php print $projectCitation; ?></div>
  <?php endif; ?>

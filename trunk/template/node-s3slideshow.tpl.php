@@ -56,7 +56,7 @@
 ?>
 
 <li class="sliderImage">
-	<img src="http://dkz.neezyl.com/<?php print $s3slideshow_filepath; ?>" alt="<?php print $s3slideshow_alt; ?>" title="<?php print $s3slideshow_title; ?>" />
+	<img src="http://deticenter.org/<?php print $s3slideshow_filepath; ?>" alt="<?php print $s3slideshow_alt; ?>" title="<?php print $s3slideshow_title; ?>" />
 		<div class="bottom">
 			<h3><a href="<?php print $s3slideshow_link; ?>"><?php print $s3slideshow_header; ?></a></h3>
 			<a href="<?php print $s3slideshow_link; ?>"><?php print $s3slideshow_caption; ?></a>

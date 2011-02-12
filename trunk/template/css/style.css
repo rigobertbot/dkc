@@ -1,4 +1,4 @@
-/* $Id: style.css,v 0.5a 2010/11/26 17:41:03 Dmitry Tretyakov Exp $ */
+/* $Id: style.css,v 0.6b 2011/01/15 20:41:03 Dmitry Tretyakov Exp $ */
 
 /* Clean override */
 
@@ -31,8 +31,7 @@ address, caption, cite, code, dfn, em, strong, th, var {
 
 ol, ul {
 	list-style-type:none;
-	list-style-position:initial;
-	list-style-image:initial;
+	list-style-image:none;
 }
 
 caption, th {
@@ -89,10 +88,10 @@ h1 {
 	line-height:140%;
 	white-space:nowrap;
 	}
-	
+
 h1 a {text-decoration:none;}
 h1 a:visited {color:#000;}
-	
+
 h2 {
 	font-size:24px;
 	font-weight:bold;
@@ -117,13 +116,12 @@ padding-top:18px;
 
 div.logo {
 	color:#333333;
-	background-color:#7DABCF;
 	height:162px;
 	width:982px;
 	margin:0px;
+ 	padding:0px;
 	margin-left:auto;
 	margin-right: auto;
-	padding:0px;
 }
 
 /* Start of MENU section */
@@ -136,8 +134,8 @@ div.menu	{
 			margin-right: auto;
 			z-index:99;
 			}
-			
-			
+
+
 div.menu ul {
 			list-style:none;
 			padding:0;
@@ -163,9 +161,9 @@ div.menu ul li{
 			text-align: center;
 			font-family:Lucida, 'Lucida Grande', Helvetica, Verdana, sans-serif;
 		}
-		
+
 div.menu ul li:first-child { border: 0px; }
-		
+
 div.menu ul li + li + li + li + li.nolink-li  { width: 282px; }
 div.menu ul li + li + li + li + li + li.nolink-li { width: 138px; }
 
@@ -178,7 +176,7 @@ div.menu ul li ul{
 			left:0;
 			top:27px;
 		}
-		
+
 div.menu ul li ul li{
 			float:none;
 			display:block;
@@ -199,11 +197,11 @@ div.menu ul li ul li{
 			width: auto;
 			white-space: nowrap;
 		}
-		
+
 div.menu ul li ul li:first-child {margin-top:2px; }
-		
+
 		li.wide ul li {width: 282px !important; padding: 0px !important; }
-		
+
 div.menu ul li a{
 			display:block;
 			height:27px;
@@ -221,9 +219,9 @@ div.menu ul li:hover ul, div.menu ul li.jshover ul{
 div.menu ul li:hover, div.menu ul li.jshover{
 			background:#7DABCF;
 		}
-		
+
 div.menu ul li ul.lastMenuItem { position: absolute; left:-33px;}
-		
+
 /* End of MENU Section */
 
 div.header {
@@ -250,12 +248,12 @@ div.header {
 	display:block;
 	margin-right:8px;
 	}
-	
+
 	#upheader {
 		font-size:13px;
 		font-weight:normal;
 	}
-	
+
 	img.subNavImage {
 	display:block;
 	position:relative;
@@ -264,7 +262,7 @@ div.header {
 	float:right;
 	padding-left:18px;
 	}
-	
+
 	div.subNav {
 	display:block;
 	position:relative;
@@ -273,17 +271,17 @@ div.header {
 	width:138px;
 	height:18px;
 	}
-	
+
 div.contents {
 	display:block;
-	clear:both;	
+	clear:both;
 	width:982px;
 	height:100%;
 	margin:0px;
 	margin-left:auto;
 	margin-right:auto;
 	}
-	
+
 /* End of contents */
 
 /* Starting footer section */
@@ -305,7 +303,7 @@ div.footer {
 		border:none;
 		height:2px;
 	}
-	
+
 	div.footerContents {
 		margin-top:8px;
 	}
@@ -346,7 +344,7 @@ div.copyright {
 	margin-right:auto;
 	white-space:nowrap;
 	}
-	
+
 div.copyright p { text-align:center; }
 
 div.rightWrapper {float:right; }
@@ -373,7 +371,7 @@ div.rightWrapper p + p {
 		margin-right:0px;
 		margin-top:10px;
 	}
-		
+
 	div.project {
 		position:relative;
 		width:264px;
@@ -385,44 +383,44 @@ div.rightWrapper p + p {
 		margin-top:18px;
 		border-left:8px solid #C7288B;
 	}
-	
-	div.project h3 a { 
+
+	div.project h3 a {
 		text-decoration:none;
 		color:#000;
 		}
-	div.project h3 a:hover { 
+	div.project h3 a:hover {
 		text-decoration:underline;
 		color: #666;
 		}
-	
+
 	div.project h3, div.project p {
 		padding-left:4px;
 	}
-	
+
 	#project1 {border-left:8px solid #00C012;}
-	
+
 	#project2 {border-left:8px solid #F27200;}
-	
+
 	#project3 {border-left:8px solid #44BDFF;}
-	
+
 	#project4 {border-left:8px solid #0068AE;}
-	
+
 	#project5 {border-left:8px solid #F52800;}
-	
+
 	#project6 {border-left:8px solid #F5E614;}
-	
+
 	#project7 {border-left:8px solid #C7288B;}
-	
+
 	#project8 {border-left:8px solid #21727D;}
-	
+
 	#project9 {border-left:8px solid #306742;}
-	
+
 	#project10 {border-left:8px solid #F56A92;}
-	
+
 	#project11 {border-left:8px solid #8B2880;}
-	
+
 	#project12 {border-left:8px solid #00B879;}
-	
+
 	div.meltedContentsContainer {
 		float:right;
 		margin-left:0px;
@@ -435,10 +433,10 @@ div.rightWrapper p + p {
 		width:414px;
 		height:288px;
 		}
-	
-	
+
+
 	/* Slideshow s3Slider */
-	
+
 	#slider {
    width: 414px; /* important to be same as image width */
    height: 288px; /* important to be same as image height */
@@ -489,24 +487,24 @@ div.rightWrapper p + p {
 
 .clear {
    clear: both;
-} 
+}
 
 /* End of slideshow */
-	
-	
+
+
 	#slodeshowSWF {
 		background-color:#55AA00;
 		width:414px;
 		height:288px;
 	}
-	
+
 	div.bannersAndProjects {
 		margin:0;
 		padding:0;
 		width:414px;
 		margin-top:18px;
 		}
-	
+
 	div.projectsContainer2 {
 		float:left;
 		width:272px;
@@ -514,15 +512,17 @@ div.rightWrapper p + p {
 		padding:0;
 		margin-right:12px;
 	}
-	
+
 	div.banners {
 		float:right;
-		margin-top:8px;
+    margin:-4px;
+    padding:0;
+    margin-top:18px;
 	}
 	 #banner1 {
 	 	margin-bottom:18px;
 	 }
-	 
+
 	div.newsContentsContainer {
 		position:relative;
 		clear:both;
@@ -530,7 +530,7 @@ div.rightWrapper p + p {
 		margin:0;
 		padding-top:34px;
 	}
-	
+
 	#mainPageLine {
 		text-align:left;
 		width:840px;
@@ -540,21 +540,21 @@ div.rightWrapper p + p {
 		color:#999;
 		background-color:#999;
 		}
-	
+
 	#sunImage {
 		position:absolute;
 		vertical-align:baseline;
 		right:0px;
 		top:12px;
 	}
-	
+
 	div.newsWrapper {
 		clear:both;
 		width: 852px;
 		margin-top:18px;
 	}
-	
-	div.news {
+
+	div.newsWrapper div.news {
 		position:relative;
 		width:264px;
 		float:left;
@@ -562,17 +562,17 @@ div.rightWrapper p + p {
 		margin-top:18px;
 		border-left: 8px solid #7DABCF;
 	}
-	
-	div.news h3 a { 
+
+	div.newsWrapper div.news h3 a {
 		text-decoration:none;
 		color:#000;
 		}
-	div.news h3 a:hover { 
+	div.newsWrapper div.news h3 a:hover {
 		text-decoration:underline;
 		color: #666;
 		}
-	
-	div.news h3, div.news p {
+
+	div.newsWrapper div.news h3, div.news p {
 		padding-left:4px;
 	}
 
@@ -582,7 +582,7 @@ div.rightWrapper p + p {
 
 
 	/* Styles for OTHER PAGES */
-	
+
 #mainHeader {
 	display:block;
 	position:relative;
@@ -591,7 +591,7 @@ div.rightWrapper p + p {
 	margin-top:8px;
 	margin-left:152px;
 }
-	
+
 
 /* Start of Column CSS */
 div.mainContentsColumnContainer {
@@ -635,7 +635,7 @@ div.sidebar ul li a {
 	border-bottom:1px solid #7DABCF;
 	text-decoration:none;
 	color:#3A5699;
-	
+
 }
 
 div.sidebar ul li a:hover {
@@ -673,6 +673,14 @@ div.sidebar ul li.active-trail a:hover {
 	background-color:#7DABCF;
 }
 
+#vk_groups {
+  width:134px !important;
+  margin-top:36px;
+	height:auto;
+  min-height:240px;
+}
+
+div.squarePic {height:30px !important;}
 
 div.mainContents {
 	float:left;
@@ -732,23 +740,105 @@ div.citation p + p {
  padding-top:18px;
 }
 
-/* Table styles */
+/*
+ *
+ * Table on the right
+ *
+ */
 
-div.tableHelp {
-	clear:both;
-	width:688px;
-	margin-top:36px;
+div.textArea {
+	width:400px;
+	height:auto;
+	float:right;
+	margin:0;
+	padding:4px;
+	background-color:#FFF;
+	border: 2px #7DABCF solid;
+	margin-top:18px;
+	margin-right:2px;
+	}
+
+div.textArea p {
+	display:block;
+	width:360px;
 }
 
-div.tableHelp table {
+div.textArea hr {
+	width: 90%;
+	text-align:center;
+	color:none;
+	background-color:none;
+	border-bottom: 1px #7DABCF solid;
+	}
+
+table.donate {
+	width:100%;
+	height:auto;
+	}
+
+tr.even {
+	background-color:#CBDDEC;
+	}
+
+table.donate tr td {
+	padding-left:2px;
+	padding-right:2px;
+	font-weight:bold;
+	text-align:left;
+	vertical-align:top;
+	}
+
+table.donate tr > td + td {
+	padding-left:6px;
+	padding-right:2px;
+	font-weight:normal;
+	text-align:left;
+	vertical-align:top;
+}
+
+
+div.serviceLogo {
+	margin-top: 18px;
+	margin-bottom: 36px;
+	}
+
+div.serviceLogo img {
+	float:left;
+	vertical-align:text-bottom;
+	}
+
+div.serviceLogo p {
+	padding-top:12px;
+	color: green;
+	font-weight:bold;
+	font-size:14px;
+}
+
+div.serviceLogo img > p + p {
+	clear:both;
+	margin-bottom:18px;
+}
+
+/* Table styles */
+
+div.tablefield-wrapper {
+	clear:both;
+	height:auto !important;
+	width:688px;
+	margin-top:72px;
+}
+
+table.tablefield {
 	width:688px;
 	background-color:#fff;
 	border:1px solid #7DABCF;
 }
 
-div.tableHelp table thead {
+table.tablefield thead {
 	background-color:#7DABCF;
 	color:#FFF;
+	font-size:14px;
+	font-weight:bold;
 }
 
 /* table and cell's width */
@@ -761,20 +851,37 @@ div.tableHelp table thead {
 	width:348px;
 }
 
-div.tableHelp table thead tr td {
+table.tablefield thead tr th {
 	font-weight:bold;
-	font-size:14px;
+	font-size:16px;
 	line-height:18px;
 	padding:0px 4px;
 	vertical-align:center;
 	text-align:center;
 }
 
-div.tableHelp table tbody tr td {
+th.row-0 p {
+	font-weight:bold;
+	font-size:14px;
+	line-height:18px;
+}
+
+table.tablefield tbody tr td {
 	font-size:12px;
 	line-height:18px;
 	padding:0px 4px;
 	text-align:left;
+	font-weight:bold;
+	vertical-align:center;
+	border:1px solid #7DABCF;
+}
+
+table.tablefield tbody tr > td + td {
+	font-size:12px;
+	line-height:18px;
+	padding:0px 4px;
+	text-align:left;
+	font-weight:normal;
 	vertical-align:center;
 	border:1px solid #7DABCF;
 }
@@ -792,10 +899,10 @@ div.formClass {
 	width:414px;
 	overflow:hidden;
 	height:auto;
-	
+
 	}
 
-div.form-item { 
+div.form-item {
 	margin-bottom:18px;
 	font-size:14px;
 	line-height:18px;
@@ -841,40 +948,163 @@ input.form-submit {
 }
 
 
+/**************************
+	*
+  * Styles for news page
+  *
+  *************************/
 
-/**
+
+div.newsRegion div.item-list {
+		clear:both;
+		width: 640px;
+    margin-left:8px;
+	}
+
+	div.newsRegion div.item-list div.news {
+		position:relative;
+		width:auto;
+		float:none;
+		margin-right:12px;
+		margin-top:18px;
+		border-left: 8px solid #7DABCF;
+	}
+  
+  div.newsRegion div.item-list li.views-row-even div.news {
+    background-color:#CBDDEC;
+    display:block;
+    padding: 9px 0;
+	}
+  
+
+	div.newsRegion div.item-list div.news h3 a {
+		text-decoration:none;
+		color:#000;
+		}
+	div.newsRegion div.item-list div.news h3 a:hover {
+		text-decoration:underline;
+		color: #666;
+		}
+
+	div.newsRegion div.item-list div.news h3, div.news p {
+		padding-left:6px;
+	}
+
+
+
+/******************************
+ *
+ * Pager design goes here
+ *
+ *****************************/
+
+
+div.pager div.item-list {
+ 	clear:both;
+  float:none;
+  margin:18px auto;
+  width:640px; 
+}
+
+ul.pager {
+  float:left;
+  padding:0 8px;
+  width:640px;
+  margin:0;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+ul.pager li {
+  float:left; 
+  display:block;
+  margin:0 4px;
+  font-weight:bold;
+  font-size:14px;
+  text-align:left;
+  vertical-align:middle
+}
+
+li.pager-current { 
+	background-color:#CBBDEC;
+  padding: 2px 2px;
+ }
+
+ul.pager li a {
+  text-decoration:none;
+  color:#3A5699;
+  padding:0 4px;
+}
+
+ul.pager li a:hover {
+  color:#FFF;
+  background-color:#7DABCF;
+  padding:2 2px;
+}
+
+
+/******************
+ *
+ * Map Styles
+ *
+ ******************/
+
+div.mapWrapper {
+  width:620px;
+  height:490px;
+  background-color:#FFF;
+  border:#000 solid 1px;
+  margin:0;
+  padding:0;
+  margin-top:18px;
+  margin-bottom:36px;
+}
+
+div.map {
+ width:600px;
+ height:470px;
+ overflow:hidden;
+ vertical-align:top;
+ margin:10px;
+ padding:0; 
+}
+
+/*****************************
+ *
  * All styles for inline using
  *
- */
- 
+ *****************************/
+
 div.aboutProject ul {
  list-style-type: disc;
- list-style-position: outside; 
+ list-style-position: outside;
+ padding-left: 20px;
  }
 
 div.aboutProject ul li {
  list-style-image: none;
  list-style-type: disc;
- list-style-position: outside; 
+ list-style-position: outside;
  }
- 
+
  div.aboutProject ol {
  list-style-type: decimal;
- list-style-position: outside; 
+ list-style-position: outside;
+ padding-left: 20px;
  }
 
 div.aboutProject ol li {
  list-style-image: none;
  list-style-type: decimal;
- list-style-position: outside; 
+ list-style-position: outside;
  }
- 
+
  div.aboutProject p {
 	text-indent:1em;
 	}
- 
- 
- 
+
+
+
 div.aboutProject strong {
 	font-weight:bold;
 }

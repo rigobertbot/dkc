@@ -1,4 +1,4 @@
-; $Id: dkcenter.info,v 0.01 2010/11/26 01:10:31 talbot Exp $
+; $Id: dkcenter.info,v 0.5b 2010/11/26 01:10:31 talbot Exp $
 
 
   ; The name and description of the theme used on the admin/build/themes page.
@@ -45,8 +45,8 @@ stylesheets[all][]   = css/reset.css
 	; stylesheets[all][]   = css/fields.css
 
 ; Custom dkcenter.org stylesheets
-stylesheets[all][]	= css/common.css
-stylesheets[all][]	= css/front-page.css
+; stylesheets[all][]	= css/common.css
+; stylesheets[all][]	= css/front-page.css
 stylesheets[all][]	= css/style.css
 
 stylesheets[print][] = css/print.css

@@ -65,12 +65,10 @@
  <?php endif; ?>
  
  <?php
- // Описываем саму форму
- if ($submitted):
+ // Описываем саму форму if ($submitted):
  ?>  
  <div class="formClass">
  	<h3>Оставьте заявку, чтобы стать волонтёром</h3>
  	<?php print $node->content['webform']['#value']; ?>
  </div>
- <?php endif; ?>
 <?php endif; ?>

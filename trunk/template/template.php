@@ -98,11 +98,21 @@ function STARTERKIT_preprocess(&$vars, $hook) {
  * @param $hook
  *   The name of the template being rendered ("page" in this case.)
  */
-/* -- Delete this line if you want to use this function
-function STARTERKIT_preprocess_page(&$vars, $hook) {
-  $vars['sample_variable'] = t('Lorem ipsum.');
+/* -- Delete this line if you want to use this function */
+function dkcenter_preprocess_page(&$vars, $hook) {
+	$path_to_theme = drupal_get_path('theme', 'dkcenter');
+  foreach ( $vars['css']['all']['module'] as $css =>$val ){
+	$theme_css=$path_to_theme . '/css/' . basename($css);
+	if (file_exists($theme_css)) {
+		$vars['css']['all']['module'][$theme_css] = $val;
+		unset($vars['css']['all']['module'][$css]);
+	}
+  }
+
+  $vars['styles'] = drupal_get_css($vars['css']);
+  unset($path_to_theme);
 }
-// */
+//
 
 /**
  * Override or insert variables into the node templates.
@@ -114,41 +124,41 @@ function STARTERKIT_preprocess_page(&$vars, $hook) {
  */
 function dkcenter_preprocess_node(&$variables) {
 	$node = $variables['node']; // Declaring array of variables
-	
-	// Creating projects variables 
+
+	// Creating projects variables
 	$variables['projectTitle'] = $node->title; // Title of the Project
 	$variables['projectBody'] = $node->content['body']['#value']; // Main project text, HTML possible
 	$variables['projectHeader'] = $node->field_project_header[0]['safe']; // Project header (h2 header)
 	$variables['projectID'] = $node->field_project_number[0]['value']; // Project identificator, using in id= tag
 	$variables['projectSummary'] = $node->teaser; // Teaser for the frontpage
-	
+
 	// Variables of Image
 	$variables['projectImage_filename'] = $node->field_project_image[0]['filename'];
 	$variables['projectImage_filepath'] = $node->field_project_image[0]['filepath'];
 	$variables['projectImage_alt'] = $node->field_project_image[0]['data']['alt'];
 	$variables['projectImage_title'] = $node->field_project_image[0]['data']['title'];
-	
+
 	$variables['projectCaption'] = $node->field_project_caption[0]['safe'];
 	$variables['projectCitation'] = $node->field_project_citation[0]['safe'];
-	
+
 	// Variables of citationImage
 	$variables['projectCitationImage_filename'] = $node->field_project_citation_image[0]['filename'];
 	$variables['projectCitationImage_filepath'] = $node->field_project_citation_image[0]['filepath'];
 	$variables['projectCitationImage_alt'] = $node->field_project_citation_image[0]['data']['alt'];
 	$variables['projectCitationImage_title'] = $node->field_project_citation_image[0]['data']['title'];
-	
-	
+
+
 	// Variables of s3Slideshow SLIDESHOW for FRONT PAGE
 	$variables['s3slideshow_filename'] = $node->field_s3slideshow_image[0]['filename'];
 	$variables['s3slideshow_filepath'] = $node->field_s3slideshow_image[0]['filepath'];
 	$variables['s3slideshow_alt'] = $node->field_s3slideshow_image[0]['data']['alt'];
 	$variables['s3slideshow_title'] = $node->field_s3slideshow_image[0]['data']['title'];
-	
+
 	$variables['s3slideshow_header'] = $node->field_s3slideshow_header[0]['safe'];
 	$variables['s3slideshow_caption'] = $node->field_s3slideshow_caption[0]['safe'];
 	$variables['s3slideshow_link'] = $node->field_s3slideshow_link[0]['safe'];
-	
-	
+
+
 	// Variables for NEWS
 	$variables['newsTitle'] = $node->field_news_header[0]['safe']; //News Header Title
 	$variables['newsBody'] = $node->content['body']['#value'];
@@ -159,7 +169,15 @@ function dkcenter_preprocess_node(&$variables) {
 	$variables['newsImage_filepath'] = $node->field_news_image[0]['filepath'];
 	$variables['newsImage_alt'] = $node->field_news_image[0]['data']['alt'];
 	$variables['newsImage_title'] = $node->field_news_image[0]['data']['title'];
-	
+	// News CAPTION
+	$variables['newsCaption'] = $node->field_news_image[0]['data']['title'];
+	// Extra image
+	$variables['newsImage_filename2'] = $node->field_news_image[1]['filename'];
+	$variables['newsImage_filepath2'] = $node->field_news_image[1]['filepath'];
+	$variables['newsImage_alt2'] = $node->field_news_image[1]['data']['alt'];
+	$variables['newsImage_title2'] = $node->field_news_image[1]['data']['title'];
+	$variables['newsCaption2'] = $node->field_news_image[1]['data']['title'];
+
 	// Variables for WEBFORMS
 	$variables['formTitle'] = $node->title;
 	$variables['formHeader'] = $node->field_webform_header[0]['safe'];
@@ -169,7 +187,7 @@ function dkcenter_preprocess_node(&$variables) {
 	$variables['formImage_alt'] = $node->field_webform_image[0]['data']['alt'];
 	$variables['formImage_title'] = $node->field_webform_image[0]['data']['title'];
 	$variables['formCaption'] = $node->field_webform_caption[0]['safe'];
-	
+
 	// And THE LAST - variables for COMMON CONTENT
 	$variables['commonTitle'] = $node->title;
 	$variables['commonHeader'] = $node->field_common_header[0]['safe'];
@@ -179,16 +197,20 @@ function dkcenter_preprocess_node(&$variables) {
 	$variables['commonImage_alt'] = $node->field_common_image[0]['data']['alt'];
 	$variables['commonImage_title'] = $node->field_common_image[0]['data']['title'];
 	$variables['commonCaption'] = $node->field_common_caption[0]['safe'];
-	
+
+	// Variables for TextArea at the right
+	$variables['commonTextArea'] = $node->field_textarea_right[0]['safe'];
+
 	// Variables for INLINE IMAGES
 	$variables['commonInlineImage_filename'] = $node->field_common_inline_image[0]['filename'];
 	$variables['commonInlineImage_filepath'] = $node->field_common_inline_image[0]['filepath'];
 	$variables['commonInlineImage_alt'] = $node->field_common_inline_image[0]['data']['alt'];
 	$variables['commonInlineImage_title'] = $node->field_common_inline_image[0]['data']['title'];
 	$variables['commonInlineImage_caption'] = $node->field_common_inline_image[0]['data']['title'];
-	
+
 	// Variables for TABLES will going further
-	
+	$variables['commonTable'] = $node->field_common_table[0]['value'];
+
 }
 
 

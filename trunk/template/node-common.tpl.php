@@ -48,7 +48,7 @@
  * @see template_preprocess_node()
  */
 ?>
-<?php 
+<?php
 /*
  * Здесь описывается оформление ноды общих страниц
  */
@@ -69,4 +69,10 @@
  <?php if ($commonCaption): ?>
  <div class="caption"><?php print $commonCaption; ?></div>
  <?php endif; ?>
+ <?php if ($commonTextArea): ?>
+ 	<div class="textArea"><?php print $commonTextArea; ?></div>
+ <?php endif; ?>
+ <?php if ($commonTable): ?>
+	<?php print $commonTable; ?>
+<?php endif; ?>
 <?php endif; ?>

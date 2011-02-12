@@ -110,18 +110,22 @@
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php print $language->language; ?>" lang="<?php print $language->language; ?>">
-
 <head>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
   <title><?php print $head_title; ?></title>
   <?php print $head; ?>
 <base href="http://deticenter.org<?php print $base_path.$directory;?>/" />
+<?php
+	if(!$is_front) {
+		print $styles;
+		print $scripts;
+	}
+	?>
+<script type="text/javascript" src="/sites/all/themes/dkcenter/js/iexplorer.js"></script>
+<?php if ($is_front): ?>
 <link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/dkcenter/css/style.css" />
 <link type="text/css" rel="stylesheet" media="print" href="/sites/all/themes/dkcenter/css/print.css?B" />
 
-<script type="text/javascript" src="/sites/all/themes/dkcenter/js/iexplorer.js"></script>
-
-<?php if ($is_front): ?>
 <script type="text/javascript" src="/sites/all/themes/dkcenter/js/jquery.js"></script>
 
 <script type="text/javascript" src="/sites/all/themes/dkcenter/js/s3Slider.js"></script>
@@ -134,43 +138,56 @@
 	 });
 </script>
 <?php endif; ?>
-  
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-12216393-2']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
 </head>
 <body>
-	<!-- Header_Image region -->
-	<?php print $header_image; ?>
-	
-	<!-- Main Horizontal menu -->
+<?php print $header_image; ?>
+
+<!-- Main Horizontal menu -->
 	<?php if ($menu_region): ?>
 		<div class="menu">
 			<?php print $menu_region; ?>
 		</div>
 	<?php endif; ?>
-		
-		
-<!-- FRONT PAGE Regions and Data -->
 
-<?php if ($is_front): ?>	
- <!-- Logotype and main site header -->
+<?php  // FRONTPAGE DATA ONLY
+if ($is_front):
+?>
+<!-- Logotype and main site header -->
 <div class="header">
- <div id="mainHeaderContainer">
-	<a href="http://deticenter.org" title="<?php print t('Home'); ?>" rel="home" id="logo">
-	 <img class="logotype" src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
-	</a>
-	<p id="upheader"><?php print $site_slogan; ?></p>
-	<h1><a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><?php print $site_name; ?></a></h1>
-</div>
+	<div id="mainHeaderContainer">
+    <a href="http://deticenter.org" title="<?php print t('Home'); ?>" rel="home" id="logo">
+     <img class="logotype" src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
+    </a>
+    <p id="upheader"><?php print $site_slogan; ?></p>
+    <h1><a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home">
+		<?php print $site_name; ?></a></h1>
+	</div>
 
- <div class="subNav">
-	<?php print $site_header; ?></div>
-</div>	
- 
+  <div class="subNav">
+    <?php print $site_header; ?></div>
+  </div>
+
 <!-- Left column container -->
 <div class="contents">
 	<div class="projectsContainer">
   	<?php print $content_left; ?>
   </div>
- 
+
 <!-- Right column container -->
 	<div class="meltedContentsContainer">
 	<?php print $content_right; ?>
@@ -184,28 +201,27 @@
 	<div class="newsWrapper">
 		<?php print $content_news; ?>
 	</div>
-	
+
 	<img src="images/children.png" alt="#" />
 </div>
 <?php endif; ?>
 
 </div>
 
-<?php 
+<?php
 /*
- * End of front page 
- */ 
-endif; ?>		
-<?php 
-// NO FRONT PAGE
-if(!$is_front): 
+ * End of front page
+ */
+endif; ?>
+<?php  // NO FRONT PAGE
+if(!$is_front):
 ?>
 
 <div class="header">
  <div id="mainHeader">
   <h1><?php print $title; ?></h1>
  </div>
-    	
+
  <div class="subNav">
  <?php print $site_header; ?></div>
 </div>
@@ -214,12 +230,12 @@ if(!$is_front):
 <div class="contents">
   <div class="mainContentsColumnContainer">
   	<div class="sidebarColumnContainer">
-    	
+
     		<!-- Панель с навигацией слева -->
 				<div class="sidebar">
 				<?php print $sidebar; ?>
 				</div>
-  
+
   	<div class="mainContents">
    <?php print $content; ?>
    </div>
@@ -228,22 +244,22 @@ if(!$is_front):
 </div>
 
 <?php endif; ?>
-<?php 
+<?php
 // FOOTER
-if ($site_footer): 
+if ($site_footer):
 ?>
 <div class="footer">
  <hr />
- <div class="footerContents">	
+ <div class="footerContents">
 	<div class="leftWrapper">
 	 <p class="footerNav"><a href="#" title="Гостевая книга">ГОСТЕВАЯ КНИГА</a></p>
 	 <p class="footerNav"><a href="#" title="Вестник ДКЦ">ГАЗЕТА &laquo;ВЕСТНИК ДКЦ&raquo;</a></p>
 	</div>
- 
+
 	<div class="copyright">
 	 <p class="footerNav">&copy;&nbsp;ДЕТСКИЙ КРИЗИСНЫЙ ЦЕНТР, г. САНКТ-ПЕТЕРБУРГ</p>
 	</div>
- 
+
 	<div class="rightWrapper">
 	 <p class="footerNav"><a href="#" title="Гостевая книга">КАРТА САЙТА</a></p>
 	 <p class="footerNav"><a href="#" title="Вестник ДКЦ">КОНТАКТЫ</a></p>

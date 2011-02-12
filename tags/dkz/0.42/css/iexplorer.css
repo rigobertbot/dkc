@@ -1,0 +1,29 @@
+﻿/* ================================================================ 
+This copyright notice must be untouched at all times.
+
+The original version of this stylesheet and the associated (x)html
+is available at http://www.cssplay.co.uk/menus/dd_valid.html
+Copyright (c) 2005-2007 Stu Nicholls. All rights reserved.
+This stylesheet and the assocaited (x)html may be modified in any 
+way to fit your requirements.
+=================================================================== */
+body { 
+	width:992px !important;
+}
+.menu { width:992px !important; }
+.header { width:992px !important; }
+.contents {width:998px !important; }
+.project {width:240px !important;}
+.newsContentsContainer img {float:right;}
+
+.menu ul li a.hide, .menu ul li a:visited.hide {display:block;}
+.menu ul li a:hover ul li a.hide {display:none;}
+
+.menu ul li a:hover {color:#fff; background:#7DABCF; display:block;}
+.menu ul li a:hover ul {color:#fff; display:block; position:relative; top:27px; left:0; width:200px !important;}
+.menu ul li a:hover ul li a.sub {background:#7DABCF; color:#fff;}
+.menu ul li a:hover ul li a {display:block; background:#7DABCF; color:#000; width:200px !important;}
+.menu ul li a:hover ul li a ul {visibility:hidden;}
+.menu ul li a:hover ul li a:hover {background:#7DABCF; color:#000;width:200px !important;}
+.menu ul li a:hover ul li a:hover ul {visibility:visible; position:relative; left:105px; top:0; color:#000; width:200px !important;}
+.menu ul li a:hover ul li a:hover ul.left {left:-105px;}

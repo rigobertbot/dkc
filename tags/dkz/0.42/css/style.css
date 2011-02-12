@@ -1,0 +1,880 @@
+/* $Id: style.css,v 0.5a 2010/11/26 17:41:03 Dmitry Tretyakov Exp $ */
+
+/* Clean override */
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td {
+	font-family:Lucida, 'Lucida Grande', Helvetica, Verdana, sans-serif;
+	font-size:12px;
+	margin:0px;
+	padding:0px;
+}
+
+table {
+	border-collapse:collapse;
+}
+
+fieldset, img {
+	border-top-width:0px;
+	border-right-width:0px;
+	border-bottom-width:0px;
+	border-left-width:0px;
+	border-top-color:#000000;
+	border-right-color:#000000;
+	border-bottom-color:#000000;
+	border-left-color:#000000;
+}
+
+address, caption, cite, code, dfn, em, strong, th, var {
+	font-style:normal;
+	font-weight:normal;
+}
+
+ol, ul {
+	list-style-type:none;
+	list-style-position:initial;
+	list-style-image:initial;
+}
+
+caption, th {
+	text-align:left;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-size:100%;
+	font-weight:normal;
+}
+
+q::before, q::after {
+	content:'';
+}
+
+abbr, acronym {
+	border-top-width:0px;
+	border-right-width:0px;
+	border-bottom-width:0px;
+	border-left-width:0px;
+	border-style:initial;
+	border-top-color:#000000;
+	border-right-color:#000000;
+	border-bottom-color:#000000;
+	border-left-color:#000000;
+}
+
+/* End of cleaning styles */
+
+
+/*
+ * Creating style for all pages
+ *
+ */
+
+
+body {
+	font-stretch:inherit;
+	background-image:url(../images/background.jpg);
+	background-repeat-x:repeat;
+	background-repeat-y:repeat;
+	background-repeat:repeat;
+	background-size:inherit;
+	margin-left:auto;
+	margin-right:auto;
+	font-size:12px;
+	line-height:18px;
+}
+
+
+h1 {
+	font-size:32px;
+	font-weight:bold;
+	line-height:140%;
+	white-space:nowrap;
+	}
+	
+h1 a {text-decoration:none;}
+h1 a:visited {color:#000;}
+	
+h2 {
+	font-size:24px;
+	font-weight:bold;
+	color:#777;
+	}
+
+h3 {
+	font-size:14px;
+	font-weight:bold;
+	line-height:18.2px;
+	margin-bottom:0px;
+}
+
+h4 {
+font-size:13px;
+font-weight:bold;
+line-height:18px;
+padding-top:18px;
+}
+
+
+
+div.logo {
+	color:#333333;
+	background-color:#7DABCF;
+	height:162px;
+	width:982px;
+	margin:0px;
+	margin-left:auto;
+	margin-right: auto;
+	padding:0px;
+}
+
+/* Start of MENU section */
+
+div.menu	{
+			width: 982px;
+			padding:0px;
+			margin-top: 9px;
+			margin-left: auto;
+			margin-right: auto;
+			z-index:99;
+			}
+			
+			
+div.menu ul {
+			list-style:none;
+			padding:0;
+			margin:0;
+			margin-left: auto;
+			margin-right: auto;
+			position: relative;
+			z-index:100;
+			display:block;
+		}
+div.menu ul li{
+			display: block;
+			float:left;
+			height:27px;
+			line-height: 27px;
+			width:138px;
+			text-align:center;
+			background:#7DABCF;
+			background-image: url(../images/menu_bg.jpg);
+			position:relative;
+			border-left: 2px #FFF solid;
+			font-size: 16px;
+			text-align: center;
+			font-family:Lucida, 'Lucida Grande', Helvetica, Verdana, sans-serif;
+		}
+		
+div.menu ul li:first-child { border: 0px; }
+		
+div.menu ul li + li + li + li + li.nolink-li  { width: 282px; }
+div.menu ul li + li + li + li + li + li.nolink-li { width: 138px; }
+
+div.menu ul li ul{
+			list-style:none;
+			padding:0px;
+			margin:0;
+			display:none;
+			position:absolute;
+			left:0;
+			top:27px;
+		}
+		
+div.menu ul li ul li{
+			float:none;
+			display:block;
+			position: relative;
+			height:27px;
+			line-height: 27px;
+			margin:0;
+			padding-right: 4px;
+			font-size:14px;
+			text-align:left;
+			text-indent: 2px;
+			background:#7DABCF;
+			border:0px;
+			border-top: 2px #FFF solid;
+			background-image: url(../images/menu_bg.jpg);
+			z-index: 105;
+			min-width: 138px;
+			width: auto;
+			white-space: nowrap;
+		}
+		
+div.menu ul li ul li:first-child {margin-top:2px; }
+		
+		li.wide ul li {width: 282px !important; padding: 0px !important; }
+		
+div.menu ul li a{
+			display:block;
+			height:27px;
+			border:0px;
+			color: #FFF;
+			font-size: 16px;
+			text-decoration:none;
+			font-weight: bold;
+		}
+div.menu ul li:hover ul, div.menu ul li.jshover ul{
+			display:block;
+			margin:0;
+			text-align:left;
+		}
+div.menu ul li:hover, div.menu ul li.jshover{
+			background:#7DABCF;
+		}
+		
+div.menu ul li ul.lastMenuItem { position: absolute; left:-33px;}
+		
+/* End of MENU Section */
+
+div.header {
+	display:block;
+	position:relative;
+	width:982px;
+	margin:0px;
+	margin-left:auto;
+	margin-right:auto;
+	}
+
+	#mainHeaderContainer {
+	display:block;
+	position:relative;
+	width:80%;
+	float:left;
+	margin-top:18px;
+	}
+
+	img.logotype {
+	height:50px;
+	width:50px;
+	float:left;
+	display:block;
+	margin-right:8px;
+	}
+	
+	#upheader {
+		font-size:13px;
+		font-weight:normal;
+	}
+	
+	img.subNavImage {
+	display:block;
+	position:relative;
+	height:18px;
+	width:22px;
+	float:right;
+	padding-left:18px;
+	}
+	
+	div.subNav {
+	display:block;
+	position:relative;
+	float:right;
+	margin-top:18px;
+	width:138px;
+	height:18px;
+	}
+	
+div.contents {
+	display:block;
+	clear:both;	
+	width:982px;
+	height:100%;
+	margin:0px;
+	margin-left:auto;
+	margin-right:auto;
+	}
+	
+/* End of contents */
+
+/* Starting footer section */
+
+div.footer {
+	clear:both;
+	width:982px;
+	margin:0;
+	margin-left:auto;
+	margin-right:auto;
+	margin-bottom:36px;
+}
+
+	div.footer hr {
+		padding:0px;
+		margin-top:0px;
+		color:#999;
+		background-color:#999;
+		border:none;
+		height:2px;
+	}
+	
+	div.footerContents {
+		margin-top:8px;
+	}
+
+div.leftWrapper { float:left; }
+
+p.footerNav {
+	float:left;
+	margin-right:4px;
+	line-height:10px;
+	font-size:10px;
+	font-weight:bold;
+	text-decoration:none;
+	color:#999;
+}
+
+P.footerNav a {
+	color:#999;
+	font-weight:bolder;
+	text-decoration:none;
+}
+
+P.footerNav a:hover {
+	color:#0064A3;
+	font-weight:bolder;
+	text-decoration:none;
+}
+
+div.leftWrapper p + p {
+	width:196px;
+	border-left: 3px solid #999;
+	padding-left:8px;
+	margin-left:4px;
+}
+
+div.copyright {
+	margin-left:auto;
+	margin-right:auto;
+	white-space:nowrap;
+	}
+	
+div.copyright p { text-align:center; }
+
+div.rightWrapper {float:right; }
+
+div.rightWrapper p + p {
+	border-left: 3px solid #999;
+	padding-left:8px;
+	margin-left:4px;
+}
+
+/* End of styling ALL pages */
+
+
+/*
+ * Starting styling the FRONT PAGE
+ * The most styled page
+ */
+
+
+	div.projectsContainer {
+		float:left;
+		width:568px;
+		margin-left:0px;
+		margin-right:0px;
+		margin-top:10px;
+	}
+		
+	div.project {
+		position:relative;
+		width:264px;
+		height:100%;
+		float:left;
+		margin:0px;
+		padding:0px;
+		margin-right:12px;
+		margin-top:18px;
+		border-left:8px solid #C7288B;
+	}
+	
+	div.project h3 a { 
+		text-decoration:none;
+		color:#000;
+		}
+	div.project h3 a:hover { 
+		text-decoration:underline;
+		color: #666;
+		}
+	
+	div.project h3, div.project p {
+		padding-left:4px;
+	}
+	
+	#project1 {border-left:8px solid #00C012;}
+	
+	#project2 {border-left:8px solid #F27200;}
+	
+	#project3 {border-left:8px solid #44BDFF;}
+	
+	#project4 {border-left:8px solid #0068AE;}
+	
+	#project5 {border-left:8px solid #F52800;}
+	
+	#project6 {border-left:8px solid #F5E614;}
+	
+	#project7 {border-left:8px solid #C7288B;}
+	
+	#project8 {border-left:8px solid #21727D;}
+	
+	#project9 {border-left:8px solid #306742;}
+	
+	#project10 {border-left:8px solid #F56A92;}
+	
+	#project11 {border-left:8px solid #8B2880;}
+	
+	#project12 {border-left:8px solid #00B879;}
+	
+	div.meltedContentsContainer {
+		float:right;
+		margin-left:0px;
+		margin-right:0px;
+		margin-top:10px;
+		}
+	div.mainImage {
+		margin:0;
+		padding:0;
+		width:414px;
+		height:288px;
+		}
+	
+	
+	/* Slideshow s3Slider */
+	
+	#slider {
+   width: 414px; /* important to be same as image width */
+   height: 288px; /* important to be same as image height */
+   position: relative; /* important */
+   overflow: hidden; /* important */
+}
+
+#sliderContent {
+   width: 414px; /* important to be same as image width or wider */
+   position: absolute; /* important */
+   top: 0; /* important */
+   margin-left: 0; /* important */
+}
+
+.sliderImage {
+   float: left; /* important */
+   position: relative; /* important */
+   display: none; /* important */
+}
+
+.sliderImage div {
+   position: absolute; /* important */
+   left: 0;
+   font: 12px/16px Arial, Helvetica World, sans-serif;
+   font-weight:bold;
+   padding:8px 8px;
+   width: 414px;
+   background-color: #000;
+   filter: alpha(opacity=70); /* here you can set the opacity of box with text */
+   -moz-opacity: 0.7; /* here you can set the opacity of box with text */
+   -khtml-opacity: 0.7; /* here you can set the opacity of box with text */
+   opacity: 0.7; /* here you can set the opacity of box with text */
+   color: #fff;
+   bottom: 0;
+
+   /*
+       if you put
+       top: 0; -> the box with text will be shown at the top of the image
+       if you put
+       bottom: 0; -> the box with text will be shown at the bottom of the image
+   */
+}
+
+.sliderImage div a {
+	color:#FFF;
+	text-decoration:none;
+}
+
+.clear {
+   clear: both;
+} 
+
+/* End of slideshow */
+	
+	
+	#slodeshowSWF {
+		background-color:#55AA00;
+		width:414px;
+		height:288px;
+	}
+	
+	div.bannersAndProjects {
+		margin:0;
+		padding:0;
+		width:414px;
+		margin-top:18px;
+		}
+	
+	div.projectsContainer2 {
+		float:left;
+		width:272px;
+		margin:0;
+		padding:0;
+		margin-right:12px;
+	}
+	
+	div.banners {
+		float:right;
+		margin-top:8px;
+	}
+	 #banner1 {
+	 	margin-bottom:18px;
+	 }
+	 
+	div.newsContentsContainer {
+		position:relative;
+		clear:both;
+		padding:0;
+		margin:0;
+		padding-top:34px;
+	}
+	
+	#mainPageLine {
+		text-align:left;
+		width:840px;
+		margin: 0 auto 0 0;
+		border:none;
+		height:2px;
+		color:#999;
+		background-color:#999;
+		}
+	
+	#sunImage {
+		position:absolute;
+		vertical-align:baseline;
+		right:0px;
+		top:12px;
+	}
+	
+	div.newsWrapper {
+		clear:both;
+		width: 852px;
+		margin-top:18px;
+	}
+	
+	div.news {
+		position:relative;
+		width:264px;
+		float:left;
+		margin-right:12px;
+		margin-top:18px;
+		border-left: 8px solid #7DABCF;
+	}
+	
+	div.news h3 a { 
+		text-decoration:none;
+		color:#000;
+		}
+	div.news h3 a:hover { 
+		text-decoration:underline;
+		color: #666;
+		}
+	
+	div.news h3, div.news p {
+		padding-left:4px;
+	}
+
+
+/* END of FRONT PAGE styling */
+
+
+
+	/* Styles for OTHER PAGES */
+	
+#mainHeader {
+	display:block;
+	position:relative;
+	width:688px;
+	float:left;
+	margin-top:8px;
+	margin-left:152px;
+}
+	
+
+/* Start of Column CSS */
+div.mainContentsColumnContainer {
+	clear:left;
+	float:left;
+	width:100%;
+	overflow:hidden;
+	margin-top:20px;
+	margin-bottom:36px;
+	background-image:url(../images/grid.gif);
+	background:#FFF;
+
+
+}
+div.sidebarColumnContainer {
+	float:left;
+	width:100%;
+	position:relative;
+	right:-140px;
+	background-image:url(../images/background.jpg); /* column 1 background colour */
+	border-left:2px solid #7DABCF;
+}
+
+/* Left navigation bar */
+
+div.sidebar {
+	float:left;
+	width:134px;
+	position:relative;
+	left:-138px;;
+	margin-top:18px;
+}
+
+div.sidebar ul li a {
+	display:block;
+	font-size:14px;
+	line-height:18px;
+	padding:0 2px;
+	margin-bottom:18px;
+	font-weight:bold;
+	border-bottom:1px solid #7DABCF;
+	text-decoration:none;
+	color:#3A5699;
+	
+}
+
+div.sidebar ul li a:hover {
+	font-size:14px;
+	line-height:18px;
+	margin-bottom:18px;
+	font-weight:bold;
+	border-bottom:1px solid #FFF;
+	text-decoration:none;
+	color:#FFF;
+	background-color:#7DABCF;
+}
+
+div.sidebar ul li.active-trail a {
+	display:block;
+	font-size:14px;
+	line-height:18px;
+	padding:0 2px;
+	margin-bottom:18px;
+	font-weight:bold;
+	border-bottom:1px solid #7DABCF;
+	text-decoration:none;
+	color:#FFF;
+	background-color:#7DABCF;
+}
+
+div.sidebar ul li.active-trail a:hover {
+	font-size:14px;
+	line-height:18px;
+	margin-bottom:18px;
+	font-weight:bold;
+	border-bottom:1px solid #7DABCF;
+	text-decoration:none;
+	color:#FFF;
+	background-color:#7DABCF;
+}
+
+
+div.mainContents {
+	float:left;
+	width:830px;
+	position:relative;
+	left:-122px;
+	overflow:hidden;
+}
+
+/* Used Equal Height Columns with Cross-Browser CSS Tutorial
+	by MATTHEW JAMES TAYLOR
+	You can find this tuturial here
+	http://matthewjamestaylor.com/blog/equal-height-columns-cross-browser-css-no-hacks
+*/
+
+.aboutProject {
+	width:404px;
+	float:left;
+	margin-top:18px;
+	margin-right:12px;
+	margin-bottom:18px;
+}
+
+div.rightImage {
+	margin-top:18px;
+}
+
+
+div.citation {
+	clear:both;
+	height:auto !important;
+	min-height:100px;
+	background-color:#CBDDEC;
+	border: 1px solid #7DABCF;
+	padding:8px;
+	width:672px;
+	margin-top:18px;
+}
+
+div.citation img {
+	width:100px;
+	height:100px;
+	float:left;
+}
+
+div.citation p {
+	padding-left:120px;
+	font-size:12px;
+	line-height:18px;
+	font-weight:bold;
+}
+
+div.citation p + p {
+ font-weight:normal;
+ font-style:italic;
+ text-align:right;
+ padding-top:18px;
+}
+
+/* Table styles */
+
+div.tableHelp {
+	clear:both;
+	width:688px;
+	margin-top:36px;
+}
+
+div.tableHelp table {
+	width:688px;
+	background-color:#fff;
+	border:1px solid #7DABCF;
+}
+
+div.tableHelp table thead {
+	background-color:#7DABCF;
+	color:#FFF;
+}
+
+/* table and cell's width */
+
+#leftCell {
+	width:242px;
+}
+
+#rightCell {
+	width:348px;
+}
+
+div.tableHelp table thead tr td {
+	font-weight:bold;
+	font-size:14px;
+	line-height:18px;
+	padding:0px 4px;
+	vertical-align:center;
+	text-align:center;
+}
+
+div.tableHelp table tbody tr td {
+	font-size:12px;
+	line-height:18px;
+	padding:0px 4px;
+	text-align:left;
+	vertical-align:center;
+	border:1px solid #7DABCF;
+}
+
+tr.even {
+	background-color:#CBDDEC;
+}
+
+/* Styles for WEBFORMS */
+div.formClass {
+	margin:0;
+	padding:0;
+	margin-top:18px;
+	margin-left:8px;
+	width:414px;
+	overflow:hidden;
+	height:auto;
+	
+	}
+
+div.form-item { 
+	margin-bottom:18px;
+	font-size:14px;
+	line-height:18px;
+	font-weight:bold;
+	color:#7DABCF;
+	}
+
+div.form-item label {
+	margin-bottom:8px;
+	margin-right: 48px;
+	}
+
+span.form-required {
+	font-size:24px;
+	line-height:18px;
+	font-weight:bold;
+	color:#F00;
+	}
+
+div.description p {
+	font-size:10px;
+	line-height:12px;
+	font-weight:bold;
+	color:#999;
+	margin-top:2px;
+	width:312px;
+	}
+
+div.description {
+	font-size:10px;
+	line-height:12px;
+	font-weight:bold;
+	color:#999;
+	margin-top:2px;
+	}
+
+input.form-submit {
+	margin-left:4px;
+	width:192px;
+	height:auto;
+	font-size:14px;
+	font-weight:bold;
+}
+
+
+
+/**
+ * All styles for inline using
+ *
+ */
+ 
+div.aboutProject ul {
+ list-style-type: disc;
+ list-style-position: outside; 
+ }
+
+div.aboutProject ul li {
+ list-style-image: none;
+ list-style-type: disc;
+ list-style-position: outside; 
+ }
+ 
+ div.aboutProject ol {
+ list-style-type: decimal;
+ list-style-position: outside; 
+ }
+
+div.aboutProject ol li {
+ list-style-image: none;
+ list-style-type: decimal;
+ list-style-position: outside; 
+ }
+ 
+ div.aboutProject p {
+	text-indent:1em;
+	}
+ 
+ 
+ 
+div.aboutProject strong {
+	font-weight:bold;
+}

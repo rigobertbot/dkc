@@ -48,7 +48,7 @@
  * @see template_preprocess_node()
  */
 ?>
-<?php 
+<?php
 /*
  * Здесь описывается оформление ноды на самой странице новости
  */
@@ -57,14 +57,29 @@
  <h2><?php print $newsTitle; ?></h2>
  <div class="aboutProject"><?php print $newsBody; ?></div>
  <div class="rightImage">
- <?php if ($newsImage_filepath): ?>
-  <img src="http://deticenter.org/<?php print $newsImage_filepath; ?>" alt="<?php print $newsImage_alt; ?>" title="<?php print $newsImage_title; ?>" />
- <?php endif; ?>
- <?php if ($newsCaption): ?>
- <div class="caption"><?php print $newsCaption; ?></div>
- <?php endif; ?>
-  <?php print theme('pager'); ?>
- <? endif; ?>
+  <?php if ($newsImage_filepath): ?>
+    <img src="http://deticenter.org/<?php print $newsImage_filepath; ?>" alt="<?php print $newsImage_alt; ?>" title="<?php print $newsImage_title; ?>" />
+      <?php if ($newsCaption): ?>
+        <div class="caption"><?php print $newsCaption; ?></div>
+      <?php endif; ?>
+  <?php endif; ?>
+
+  <?php if ($newsImage_filepath2): ?>
+    <p class="blankSpace">&nbsp;</p>
+    <img src="http://deticenter.org/<?php print $newsImage_filepath2; ?>" alt="<?php print $newsImage_alt2; ?>" title="<?php print $newsImage_title2; ?>" />
+  
+      <?php if ($newsCaption2): ?>
+        <div class="caption"><?php print $newsCaption2; ?></div>
+      <?php endif; ?>
+  <?php endif; ?>
+
+		<?php if ($pager): ?>
+     <div class="pager">
+      <?php print $pager; ?>
+     </div> 
+   <?php endif; ?>
+   
+<?php endif; ?>
 
 <?php
 /*

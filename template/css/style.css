@@ -1045,6 +1045,35 @@ ul.pager li a:hover {
 
 /******************
  *
+ * Partners Styles
+ *
+ ******************/div.partners	{
+	width: 720px;
+	float:left;
+	margin-top:18px;
+	margin-right:12px;	margin-bottom:18px;
+	}
+	ul.partnersList	{	list-style-type: none;
+	}
+	ul.partnersList li	{
+	margin-bottom: 18px;
+	width: auto;	height: auto;
+	font-weight: bold;
+	font-size: 12px;
+	line-height: 18px;
+	color:#000;
+	vertical-align: baseline;	}
+	
+ul.partnersList li a img	{	float: left;
+	margin-right: 8px;
+	vertical-align: baseline;	}	
+	ul.partnersList li a	{	text-decoration: none;
+	color:#000;	}
+	ul.partnersList li a:hover	{
+	text-decoration: underline;	color: #999;
+	}
+/******************
+ *
  * Map Styles
  *
  ******************/

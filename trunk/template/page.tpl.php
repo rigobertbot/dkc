@@ -133,7 +133,7 @@
 <script type="text/javascript">
 	 $(document).ready(function() {
 		 $('#slider').s3Slider({
-			 timeOut: 5000
+			 timeOut: 4000
 		 });
 	 });
 </script>
@@ -252,8 +252,6 @@ if ($site_footer):
  <hr />
  <div class="footerContents">
 	<div class="leftWrapper">
-	 <p class="footerNav"><a href="#" title="Гостевая книга">ГОСТЕВАЯ КНИГА</a></p>
-	 <p class="footerNav"><a href="#" title="Вестник ДКЦ">ГАЗЕТА &laquo;ВЕСТНИК ДКЦ&raquo;</a></p>
 	</div>
 
 	<div class="copyright">
@@ -261,8 +259,8 @@ if ($site_footer):
 	</div>
 
 	<div class="rightWrapper">
-	 <p class="footerNav"><a href="#" title="Гостевая книга">КАРТА САЙТА</a></p>
-	 <p class="footerNav"><a href="#" title="Вестник ДКЦ">КОНТАКТЫ</a></p>
+	 <p class="footerNav"><a href="#" title="Карта сайта">КАРТА САЙТА</a></p>
+	 <p class="footerNav"><a href="/content/kontakty.html" title="Наши контакты">КОНТАКТЫ</a></p>
 	</div>
  </div>
 </div>

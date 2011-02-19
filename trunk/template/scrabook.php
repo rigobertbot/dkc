@@ -1,3 +1,4 @@
+<meta http-equiv="content-type" content="text/html;charset=utf-8">
 <a href="<?php print $front_page; ?>" 
 			title="<?php print t('Home'); ?>" rel="home" id="logo">
 			<img class="logotype" src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" /></a>     			 

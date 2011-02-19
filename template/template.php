@@ -210,6 +210,13 @@ function dkcenter_preprocess_node(&$variables) {
 
 	// Variables for TABLES will going further
 	$variables['commonTable'] = $node->field_common_table[0]['value'];
+	
+	// Variables for PARTNERS
+	$variables['partners_filename'] = $node->field_partners_partner[0]['filename'];
+	$variables['partners_filepath'] = $node->field_partners_partner[0]['filepath'];
+	$variables['partners_alt'] = $node->field_partners_partner[0]['data']['alt'];
+	$variables['partners_url'] = $node->field_partners_partner[0]['data']['title'];
+	$variables['partners_title'] = $node->field_partners_partner[0]['data']['description'];
 
 }
 

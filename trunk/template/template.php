@@ -114,6 +114,7 @@ function dkcenter_preprocess_page(&$vars, $hook) {
 }
 //
 
+
 /**
  * Override or insert variables into the node templates.
  *
@@ -212,11 +213,21 @@ function dkcenter_preprocess_node(&$variables) {
 	$variables['commonTable'] = $node->field_common_table[0]['value'];
 	
 	// Variables for PARTNERS
-	$variables['partners_filename'] = $node->field_partners_partner[0]['filename'];
+	/* $variables['partners_filename'] = $node->field_partners_partner[0]['filename'];
 	$variables['partners_filepath'] = $node->field_partners_partner[0]['filepath'];
 	$variables['partners_alt'] = $node->field_partners_partner[0]['data']['alt'];
 	$variables['partners_url'] = $node->field_partners_partner[0]['data']['title'];
-	$variables['partners_title'] = $node->field_partners_partner[0]['data']['description'];
+	$variables['partners_title'] = $node->field_partners_partner[0]['data']['description']; */
+	
+	$partner_items = $node->field_partners_partner;
+	
+	foreach ($partner_items as $id => $partner)	{
+		$variables['partners_filename'] = $partner['filename'];
+		$variables['partners_filepath'] = $partner['filepath'];
+		$variables['partners_alt'] = $partner['data']['alt'];
+		$variables['partners_url'] = $partner['data']['title'];
+		$variables['partners_title'] = $partner['data']['description'];
+	}
 
 }
 

@@ -54,7 +54,7 @@
  */
 ?>
 <?php if ($page): ?>
- <h2><?php print $formHeader; ?></h2>
+ <h2><?php print $title; ?></h2>
  <div class="aboutProject"><?php print $formBody; ?></div>
  <?php if ($formImage_filename): ?>
  <div class="rightImage">

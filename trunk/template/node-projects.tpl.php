@@ -54,7 +54,7 @@
  */
 ?>
 <?php if ($page): ?>
- <h2><?php print $projectHeader; ?></h2>
+ <h2><?php print $title; ?></h2>
  <div class="aboutProject"><?php print $projectBody; ?></div>
  <?php if ($projectImage_filename): ?>
  <div class="rightImage">
@@ -79,7 +79,7 @@
 ?>
 <?php if ($teaser): ?>
 <div class="project" id="project<?php print $projectID; ?>">
- <h3><a href="<?php print $node_url ?>" title="<?php print $title ?>"><?php print $title; ?></a></h3>
+ <h3><a href="<?php print $node_url ?>" title="<?php print $node->field_section[0]['safe']; ?>"><?php print $node->field_section[0]['safe']; ?></a></h3>
 <?php print $projectSummary; ?>
 </div>
 <?php endif; ?>

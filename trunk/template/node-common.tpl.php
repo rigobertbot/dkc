@@ -54,7 +54,7 @@
  */
 ?>
 <?php if ($page): ?>
- <h2><?php print $commonHeader; ?></h2>
+ <h2><?php print $title; ?></h2>
  <div class="aboutProject"><?php print $commonBody; ?>
 	<?php if ($commonInlineImage_filename): ?>
 	 <div class="inlineImage">

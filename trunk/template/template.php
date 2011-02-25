@@ -84,10 +84,11 @@ function dkcenter_theme(&$existing, $type, $theme, $path) {
  * @param $hook
  *   The name of the template being rendered (name of the .tpl.php file.)
  */
-/* -- Delete this line if you want to use this function
-function STARTERKIT_preprocess(&$vars, $hook) {
-  $vars['sample_variable'] = t('Lorem ipsum.');
+/* -- Delete this line if you want to use this function 
+function dkcenter_preprocess(&$vars, $hook) {
+  $vars['siteSection'] = $node->field_section[0]['value'];
 }
+
 // */
 
 /**
@@ -123,9 +124,11 @@ function dkcenter_preprocess_page(&$vars, $hook) {
  * @param $hook
  *   The name of the template being rendered ("node" in this case.)
  */
+ 
+
 function dkcenter_preprocess_node(&$variables) {
 	$node = $variables['node']; // Declaring array of variables
-
+	
 	// Creating projects variables
 	$variables['projectTitle'] = $node->title; // Title of the Project
 	$variables['projectBody'] = $node->content['body']['#value']; // Main project text, HTML possible
@@ -212,22 +215,19 @@ function dkcenter_preprocess_node(&$variables) {
 	// Variables for TABLES will going further
 	$variables['commonTable'] = $node->field_common_table[0]['value'];
 	
-	// Variables for PARTNERS
-	/* $variables['partners_filename'] = $node->field_partners_partner[0]['filename'];
-	$variables['partners_filepath'] = $node->field_partners_partner[0]['filepath'];
-	$variables['partners_alt'] = $node->field_partners_partner[0]['data']['alt'];
-	$variables['partners_url'] = $node->field_partners_partner[0]['data']['title'];
-	$variables['partners_title'] = $node->field_partners_partner[0]['data']['description']; */
-	
+	/* Variables for PARTNERS */
 	$partner_items = $node->field_partners_partner;
 	
-	foreach ($partner_items as $id => $partner)	{
-		$variables['partners_filename'] = $partner['filename'];
-		$variables['partners_filepath'] = $partner['filepath'];
-		$variables['partners_alt'] = $partner['data']['alt'];
-		$variables['partners_url'] = $partner['data']['title'];
-		$variables['partners_title'] = $partner['data']['description'];
-	}
+	$variables['partner_items'] = count($partner_items);
+	
+	foreach ($partner_items as $id => $partner) {
+		$variables['partners_filename'][$id] = $partner['filename'];
+		$variables['partners_filepath'][$id] = $partner['filepath'];
+		$variables['partners_alt'][$id] = $partner['data']['alt'];
+		$variables['partners_url'][$id] = $partner['data']['title'];
+		$variables['partners_title'][$id] = $partner['data']['description'];
+	} 
+
 
 }
 

@@ -54,7 +54,7 @@
  */
 ?>
 <?php if ($page): ?>
- <h2><?php print $newsTitle; ?></h2>
+ <h2><?php print $title; ?></h2>
  <div class="aboutProject"><?php print $newsBody; ?></div>
  <div class="rightImage">
   <?php if ($newsImage_filepath): ?>
@@ -63,7 +63,7 @@
         <div class="caption"><?php print $newsCaption; ?></div>
       <?php endif; ?>
   <?php endif; ?>
-
+  
   <?php if ($newsImage_filepath2): ?>
     <p class="blankSpace">&nbsp;</p>
     <img src="http://deticenter.org/<?php print $newsImage_filepath2; ?>" alt="<?php print $newsImage_alt2; ?>" title="<?php print $newsImage_title2; ?>" />
@@ -88,7 +88,7 @@
 ?>
 <?php if ($teaser): ?>
 <div class="news" id="news_<?php print $newsID; ?>">
- <h3><a href="<?php print $node_url ?>" title="<?php print $newsTitle ?>"><?php print $newsTitle; ?></a></h3>
+ <h3><a href="<?php print $node_url ?>" title="<?php print $title ?>"><?php print $title; ?></a></h3>
 <?php print $newsSummary; ?>
 </div>
 <?php endif; ?>

@@ -213,13 +213,13 @@ if ($is_front):
  * End of front page
  */
 endif; ?>
+
 <?php  // NO FRONT PAGE
 if(!$is_front):
 ?>
-
 <div class="header">
  <div id="mainHeader">
-  <h1><?php print $title; ?></h1>
+  <h1><?php print $node->field_section[0]['safe']; ?></h1>
  </div>
 
  <div class="subNav">

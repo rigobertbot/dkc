@@ -56,12 +56,24 @@
 <?php if ($page): ?>
  <div class="partners">
 	<ul class="partnersList">
-	<?php if ($partners_filename): ?>
+		<?php /*
 		<li><a href="<?php print $partners_url; ?>" target="_blank" >
 		<img src="http://deticenter.org/<?php print $partners_filepath; ?>" alt="<?php print $partners_alt; ?>" /></a>
 		<a href="<?php print $partners_url; ?>" target="_blank" ><?php print $partners_title; ?></a>
-		</li>
-	<?php endif; ?>
+		</li> */ ?>
+
+<?php for ($i=0; $i<$partner_items; $i++): ?>
+	<li>
+	 <a href="<?php print $partners_url[$i]; ?>" target="_blank" >
+	 <img src="http://deticenter.org/<?php print $partners_filepath[$i]; ?>" alt="<?php print $partners_alt[$i]; ?>" /></a>
+	 <a href="<?php print $partners_url[$i]; ?>" target="_blank" > 
+	 <?php print $partners_title[$i]; ?>
+	 </a>
+	</li>
+<?php endfor; ?>
+	
 	 </ul>
  </div>
+
+
 <?php endif; ?>

@@ -1,4 +1,4 @@
-/* $Id: style.css,v 0.6b 2011/01/15 20:41:03 Dmitry Tretyakov Exp $ */
+/* $Id: style.css,v 0.67b 2011/02/21 20:41:03 Dmitry Tretyakov Exp $ */
 
 /* Clean override */
 
@@ -1046,31 +1046,51 @@ ul.pager li a:hover {
 /******************
  *
  * Partners Styles
+
  *
- ******************/div.partners	{
+ ******************/
+div.partners	{
 	width: 720px;
 	float:left;
 	margin-top:18px;
-	margin-right:12px;	margin-bottom:18px;
+	margin-right:12px;
+	margin-bottom:18px;
 	}
-	ul.partnersList	{	list-style-type: none;
+	
+ul.partnersList	{
+	list-style-type: none;
 	}
-	ul.partnersList li	{
+	
+ul.partnersList li	{
+	float:none;
+	clear:both;
 	margin-bottom: 18px;
-	width: auto;	height: auto;
+	width: auto;
+	height: auto;
 	font-weight: bold;
 	font-size: 12px;
 	line-height: 18px;
 	color:#000;
-	vertical-align: baseline;	}
+	vertical-align: baseline;
+	}
 	
-ul.partnersList li a img	{	float: left;
+ul.partnersList li a img	{
+	float: left;
 	margin-right: 8px;
-	vertical-align: baseline;	}	
-	ul.partnersList li a	{	text-decoration: none;
-	color:#000;	}
-	ul.partnersList li a:hover	{
-	text-decoration: underline;	color: #999;
+	vertical-align: baseline;
+	margin-bottom:18px;
+	}	
+	
+ul.partnersList li a	{
+	text-decoration: none;
+	color:#000;
+	}
+	
+ul.partnersList li a:hover	{
+	text-decoration: underline;
+
+	color: #999;
+
 	}
 /******************
  *
@@ -1096,6 +1116,24 @@ div.map {
  vertical-align:top;
  margin:10px;
  padding:0; 
+}
+
+#dkcenter_banner {
+	margin-top: 18px;
+	margin-bottom: 8px;
+}
+
+#helper {
+	width: 360px;
+	margin-top: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	border: 1px solid #CCC;
+	padding:8px;
+	background-color: ##CCDEED;;
+	font-family: Courier;
+	font-size:10px;
+	line-height:14px;
 }
 
 /*****************************
@@ -1131,8 +1169,6 @@ div.aboutProject ol li {
  div.aboutProject p {
 	text-indent:1em;
 	}
-
-
 
 div.aboutProject strong {
 	font-weight:bold;

@@ -43,7 +43,7 @@ h1, h2, h3, h4, h5, h6 {
 	font-weight:normal;
 }
 
-q::before, q::after {
+q:before, q:after {
 	content:'';
 }
 
@@ -856,7 +856,7 @@ table.tablefield thead tr th {
 	font-size:16px;
 	line-height:18px;
 	padding:0px 4px;
-	vertical-align:center;
+	vertical-align:middle;
 	text-align:center;
 }
 
@@ -872,7 +872,7 @@ table.tablefield tbody tr td {
 	padding:0px 4px;
 	text-align:left;
 	font-weight:bold;
-	vertical-align:center;
+	vertical-align:middle;
 	border:1px solid #7DABCF;
 }
 
@@ -882,7 +882,7 @@ table.tablefield tbody tr > td + td {
 	padding:0px 4px;
 	text-align:left;
 	font-weight:normal;
-	vertical-align:center;
+	vertical-align:middle;
 	border:1px solid #7DABCF;
 }
 
@@ -1039,7 +1039,7 @@ ul.pager li a {
 ul.pager li a:hover {
   color:#FFF;
   background-color:#7DABCF;
-  padding:2 2px;
+  padding:2px 2px;
 }
 
 
@@ -1130,7 +1130,7 @@ div.map {
 	margin-right: auto;
 	border: 1px solid #CCC;
 	padding:8px;
-	background-color: ##CCDEED;;
+	background-color: #CCDEED;;
 	font-family: Courier;
 	font-size:10px;
 	line-height:14px;

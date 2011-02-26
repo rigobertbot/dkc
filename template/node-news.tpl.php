@@ -72,6 +72,7 @@
         <div class="caption"><?php print $newsCaption2; ?></div>
       <?php endif; ?>
   <?php endif; ?>
+ </div>
 
 		<?php if ($pager): ?>
      <div class="pager">

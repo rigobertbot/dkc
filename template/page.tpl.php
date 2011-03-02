@@ -111,10 +111,20 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php print $language->language; ?>" lang="<?php print $language->language; ?>">
 <head>
-<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-  <title><?php print $head_title; ?></title>
-  <?php print $head; ?>
+<?php print $head; ?>
+<title><?php print $head_title; ?></title>
 <base href="http://deticenter.org<?php print $base_path.$directory;?>/" />
+<meta name="description" content="Санкт-Петербургская общественная благотворительная организация
+      Детский Кризисный центр" />
+<meta name="keywords" content="Детский кризисный центр, дети, психологическая помощь, телефон доверия, волонтеры,
+      трудные подростки, Санкт-Петербург, благотворительная организация, СПб, помощь семьям, трудная ситуация" />
+<meta name="robots" content="index,follow" />
+
+<!-- Yandex Verification -->
+<meta name='yandex-verification' content='4057d7a60a9deabc' />
+
+<!-- YAHOO! Verification code -->
+<meta name="y_key" content="c9eec32fd4c5e92c" />
 <?php
 	if(!$is_front) {
 		print $styles;
@@ -123,13 +133,11 @@
 	?>
 <script type="text/javascript" src="/sites/all/themes/dkcenter/js/iexplorer.js"></script>
 <?php if ($is_front): ?>
+<meta name="canonical" content="/" />
 <link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/dkcenter/css/style.css" />
 <link type="text/css" rel="stylesheet" media="print" href="/sites/all/themes/dkcenter/css/print.css?B" />
-
 <script type="text/javascript" src="/sites/all/themes/dkcenter/js/jquery.js"></script>
-
 <script type="text/javascript" src="/sites/all/themes/dkcenter/js/s3Slider.js"></script>
-
 <script type="text/javascript">
 	 $(document).ready(function() {
 		 $('#slider').s3Slider({
@@ -253,6 +261,37 @@ if ($site_footer):
  <div class="footerContents">
 	<div class="leftWrapper">
 	</div>
+
+   <!-- Yandex.Metrika counter -->
+<div style="display:none;"><script type="text/javascript">
+(function(w, c) {
+    (w[c] = w[c] || []).push(function() {
+        try {
+            w.yaCounter4886170 = new Ya.Metrika(4886170);
+             yaCounter4886170.clickmap(true);
+             yaCounter4886170.trackLinks(true);
+
+        } catch(e) { }
+    });
+})(window, 'yandex_metrika_callbacks');
+</script></div>
+<script src="//mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script>
+<noscript><img src="//mc.yandex.ru/watch/4886170" style="position:absolute; left:-9999px;" alt="" /></noscript>
+<!-- /Yandex.Metrika counter -->
+
+<!-- Mail.ru Counter :( -->
+<div class="mailru">
+<script type="text/javascript">//<![CDATA[
+var a='';js=10;d=document;
+try{a+=';r='+escape(d.referrer);}catch(e){}try{a+=';j='+navigator.javaEnabled();js=11;}catch(e){}
+try{s=screen;a+=';s='+s.width+'*'+s.height;a+=';d='+(s.colorDepth?s.colorDepth:s.pixelDepth);js=12;}catch(e){}
+try{if(typeof((new Array).push('t'))==="number")js=13;}catch(e){}
+try{d.write('<a href="http://top.mail.ru/jump?from=2001192"><img src="http://d9.c8.be.a1.top.mail.ru/counter?id=2001192;t=95;js='+js+
+a+';rand='+Math.random()+'" alt="Рейтинг@Mail.ru" style="border:0;" height="18" width="88" \/><\/a>');}catch(e){}//]]></script>
+<noscript><p><a href="http://top.mail.ru/jump?from=2001192"><img src="http://d9.c8.be.a1.top.mail.ru/counter?js=na;id=2001192;t=95"
+style="border:0;" height="18" width="88" alt="Рейтинг@Mail.ru" /></a></p></noscript>
+<!-- //Rating@Mail.ru counter -->
+</div>
 
 	<div class="copyright">
 	 <p class="footerNav">&copy;&nbsp;ДЕТСКИЙ КРИЗИСНЫЙ ЦЕНТР, г. САНКТ-ПЕТЕРБУРГ</p>

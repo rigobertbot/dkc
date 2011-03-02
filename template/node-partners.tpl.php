@@ -1,4 +1,4 @@
-<?php
+  <?php
 // $Id: node-partners.tpl.php,v 0.5.3 2011/02/19 18:48:33 talbot Exp $
 
 /**
@@ -61,14 +61,21 @@
 		<img src="http://deticenter.org/<?php print $partners_filepath; ?>" alt="<?php print $partners_alt; ?>" /></a>
 		<a href="<?php print $partners_url; ?>" target="_blank" ><?php print $partners_title; ?></a>
 		</li> */ ?>
-
 <?php for ($i=0; $i<$partner_items; $i++): ?>
 	<li>
-	 <a href="<?php print $partners_url[$i]; ?>" target="_blank" >
-	 <img src="http://deticenter.org/<?php print $partners_filepath[$i]; ?>" alt="<?php print $partners_alt[$i]; ?>" /></a>
-	 <a href="<?php print $partners_url[$i]; ?>" target="_blank" > 
-	 <?php print $partners_title[$i]; ?>
-	 </a>
+    <?php if ($partners_url[$i]): ?>
+    <a href="<?php print $partners_url[$i]; ?>" target="_blank" >
+    <?php endif; ?>
+      <span class="partnerLogo">
+        <img src="http://deticenter.org/<?php print $partners_filepath[$i]; ?>"
+             alt="<?php print $partners_alt[$i]; ?>" />
+      </span>
+    <?php if ($partners_url[$i]): ?></a><?php endif; ?>
+    <?php if ($partners_url[$i]): ?>
+    <a href="<?php print $partners_url[$i]; ?>" target="_blank" >
+    <?php endif; ?>
+      <span class="partner"><?php print $partners_title[$i]; ?></span>
+    <?php if ($partners_url[$i]): ?></a><?php endif; ?>
 	</li>
 <?php endfor; ?>
 	

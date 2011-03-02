@@ -102,6 +102,8 @@ function dkcenter_preprocess(&$vars, $hook) {
 /* -- Delete this line if you want to use this function */
 function dkcenter_preprocess_page(&$vars, $hook) {
 	$path_to_theme = drupal_get_path('theme', 'dkcenter');
+  
+  // Making CSS good-looking
   foreach ( $vars['css']['all']['module'] as $css =>$val ){
 	$theme_css=$path_to_theme . '/css/' . basename($css);
 	if (file_exists($theme_css)) {
@@ -109,6 +111,18 @@ function dkcenter_preprocess_page(&$vars, $hook) {
 		unset($vars['css']['all']['module'][$css]);
 	}
   }
+
+  // Unset all unnescesary CSS files
+  unset($vars['css']['all']['module']['modules/system/defaults.css']);
+  unset($vars['css']['all']['module']['modules/system/system.css']);
+  unset($vars['css']['all']['module']['modules/node/node.css']);
+  unset($vars['css']['all']['module']['modules/system/system-menus.css']);
+  unset($vars['css']['all']['module']['modules/user/user.css']);
+  unset($vars['css']['all']['module']['sites/all/modules/cck/theme/content-module.css']);
+  unset($vars['css']['all']['module']['sites/all/modules/filefield/filefield.css']);
+  unset($vars['css']['all']['module']['sites/all/modules/cck/modules/fieldgroup/fieldgroup.css']);
+  unset($vars['css']['all']['module']['sites/all/modules/views/css/views.css']);
+  unset($vars['css']['all']['module']['sites/all/modules/tablefield/tablefield.css']);
 
   $vars['styles'] = drupal_get_css($vars['css']);
   unset($path_to_theme);

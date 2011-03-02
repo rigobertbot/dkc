@@ -339,6 +339,13 @@ div.leftWrapper p + p {
 	margin-left:4px;
 }
 
+div.mailru {
+  width:88px;
+  margin-left: 0px;
+  margin-right: 12px;
+  float:left;
+}
+
 div.copyright {
 	margin-left:auto;
 	margin-right:auto;
@@ -561,6 +568,9 @@ div.rightWrapper p + p {
 		margin-right:12px;
 		margin-top:18px;
 		border-left: 8px solid #7DABCF;
+    height: 110px;
+    overflow: hidden;
+    padding-bottom: 1px;
 	}
 
 	div.newsWrapper div.news h3 a {
@@ -601,11 +611,9 @@ div.mainContentsColumnContainer {
 	overflow:hidden;
 	margin-top:20px;
 	margin-bottom:36px;
-	background-image:url(../images/grid.gif);
-	background:#FFF;
-
-
+	background-image:url(../images/background.jpg);
 }
+
 div.sidebarColumnContainer {
 	float:left;
 	width:100%;
@@ -708,6 +716,17 @@ div.rightImage {
 	margin-top:18px;
 }
 
+div.caption {
+  margin-top: 18px;
+  margin-left: 416px;
+}
+
+div.caption p {
+  font-size: 24px;
+  font-weight: bold;
+  color: #336600;
+  padding-left: 24px;
+}
 
 div.citation {
 	clear:both;
@@ -1071,27 +1090,20 @@ ul.partnersList li	{
 	font-size: 12px;
 	line-height: 18px;
 	color:#000;
-	vertical-align: baseline;
+	vertical-align: bottom;
 	}
 	
-ul.partnersList li a img	{
-	float: left;
-	margin-right: 8px;
-	vertical-align: baseline;
+span.partnerLogo	{
+	width: 185px;
+  text-align: right;
+  padding-right: 0px;
+  float: left;
+	margin-right: 12px;
+	vertical-align: bottom;
 	margin-bottom:18px;
-	}	
-	
-ul.partnersList li a	{
-	text-decoration: none;
-	color:#000;
 	}
-	
-ul.partnersList li a:hover	{
-	text-decoration: underline;
 
-	color: #999;
 
-	}
 /******************
  *
  * Map Styles

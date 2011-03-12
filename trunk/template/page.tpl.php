@@ -299,7 +299,7 @@ style="border:0;" height="18" width="88" alt="Рейтинг@Mail.ru" /></a></p>
 
 	<div class="rightWrapper">
 	 <p class="footerNav"><a href="#" title="Карта сайта">КАРТА САЙТА</a></p>
-	 <p class="footerNav"><a href="/content/kontakty.html" title="Наши контакты">КОНТАКТЫ</a></p>
+	 <p class="footerNav"><a href="/contacts/contacts.html" title="Наши контакты">КОНТАКТЫ</a></p>
 	</div>
  </div>
 </div>

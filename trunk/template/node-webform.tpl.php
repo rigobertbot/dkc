@@ -68,7 +68,11 @@
  // Описываем саму форму if ($submitted):
  ?>  
  <div class="formClass">
- 	<h3>Оставьте заявку, чтобы стать волонтёром</h3>
+  <?php if ($nid == 96): ?>
+    <h3>Связаться с нашим социальным работником</h3>
+  <?php else: ?>
+    <h3>Оставьте заявку, чтобы стать волонтёром</h3>
+  <?php endif; ?>
  	<?php print $node->content['webform']['#value']; ?>
  </div>
 <?php endif; ?>

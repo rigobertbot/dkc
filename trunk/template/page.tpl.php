@@ -148,6 +148,8 @@
 <?php endif; ?>
 
 <!-- Google Analytics -->
+<meta name="google-site-verification" content="QzUTXZnJUKywUVm21tt2oK6294tRRsi9zv13MMXlj0M" />
+
 <script type="text/javascript">
 
   var _gaq = _gaq || [];
@@ -298,7 +300,7 @@ style="border:0;" height="18" width="88" alt="Рейтинг@Mail.ru" /></a></p>
 	</div>
 
 	<div class="rightWrapper">
-	 <p class="footerNav"><a href="#" title="Карта сайта">КАРТА САЙТА</a></p>
+	 <p class="footerNav"><a href="/sitemap.xml" title="Карта сайта">КАРТА САЙТА</a></p>
 	 <p class="footerNav"><a href="/contacts/contacts.html" title="Наши контакты">КОНТАКТЫ</a></p>
 	</div>
  </div>

@@ -28,11 +28,9 @@
 
   // Print out the main part of the form.
   // Feel free to break this up and move the pieces within the array.
-print ('<fieldset class="webform collapsible">');
  print drupal_render($form['submitted']['_name']);
  print drupal_render($form['submitted']['_contacts']);
  print drupal_render($form['submitted']['__email']);
-print ('</fieldset>');
  print drupal_render($form['submitted']['__application']);
  print drupal_render($form['details']);
  print drupal_render($form['form_build_id']);

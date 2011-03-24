@@ -119,12 +119,10 @@
 <meta name="keywords" content="Детский кризисный центр, дети, психологическая помощь, телефон доверия, волонтеры,
       трудные подростки, Санкт-Петербург, благотворительная организация, СПб, помощь семьям, трудная ситуация" />
 <meta name="robots" content="index,follow" />
+<meta name="canonical" content="/" />
 
-<!-- Yandex Verification -->
-<meta name='yandex-verification' content='4057d7a60a9deabc' />
-
-<!-- YAHOO! Verification code -->
-<meta name="y_key" content="c9eec32fd4c5e92c" />
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/dkcenter/css/style.css" />
+<link type="text/css" rel="stylesheet" media="print" href="/sites/all/themes/dkcenter/css/print.css?B" />
 <?php
 	if(!$is_front) {
 		print $styles;
@@ -133,9 +131,6 @@
 	?>
 <script type="text/javascript" src="/sites/all/themes/dkcenter/js/iexplorer.js"></script>
 <?php if ($is_front): ?>
-<meta name="canonical" content="/" />
-<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/dkcenter/css/style.css" />
-<link type="text/css" rel="stylesheet" media="print" href="/sites/all/themes/dkcenter/css/print.css?B" />
 <script type="text/javascript" src="/sites/all/themes/dkcenter/js/jquery.js"></script>
 <script type="text/javascript" src="/sites/all/themes/dkcenter/js/s3Slider.js"></script>
 <script type="text/javascript">
@@ -147,6 +142,10 @@
 </script>
 <?php endif; ?>
 
+<!-- Yandex Verification -->
+<meta name='yandex-verification' content='4057d7a60a9deabc' />
+<!-- YAHOO! Verification code -->
+<meta name="y_key" content="c9eec32fd4c5e92c" />
 <!-- Google Analytics -->
 <meta name="google-site-verification" content="QzUTXZnJUKywUVm21tt2oK6294tRRsi9zv13MMXlj0M" />
 
@@ -161,9 +160,9 @@
     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
-
 </script>
 </head>
+
 <body>
 <?php print $header_image; ?>
 

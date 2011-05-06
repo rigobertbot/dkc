@@ -55,6 +55,15 @@
 ?>
 <?php if ($page): ?>
  <h2><?php print $title; ?></h2>
+ <?php if (!$commonImage_filename && !$commonTextArea && !$commonTable): ?>
+ <div class="content"><?php print $commonBody; ?>
+	<?php if ($commonInlineImage_filename): ?>
+	 <div class="inlineImage">
+		 <img src="http://deticenter.org/<?php print $commonInlineImage_filepath; ?>" alt="<?php print $commonInlineImage_alt; ?>" title="<?php print $commonInlineImage_title; ?>" /><div class="inlineCaption"><?php print $commonInlineImage_caption; ?></div>
+	 </div>
+	<?php endif; ?>
+ </div>
+ <?php else: ?>
  <div class="aboutProject"><?php print $commonBody; ?>
 	<?php if ($commonInlineImage_filename): ?>
 	 <div class="inlineImage">
@@ -62,10 +71,9 @@
 	 </div>
 	<?php endif; ?>
  </div>
- <?php if ($commonImage_filename): ?>
  <div class="rightImage">
   <img src="http://deticenter.org/<?php print $commonImage_filepath; ?>" alt="<?php print $commonImage_alt; ?>" title="<?php print $commonImage_title; ?>" /></div>
- <?php endif; ?>
+
  <?php if ($commonCaption): ?>
  <div class="caption"><?php print $commonCaption; ?></div>
  <?php endif; ?>
@@ -74,5 +82,6 @@
  <?php endif; ?>
  <?php if ($commonTable): ?>
 	<?php print $commonTable; ?>
-<?php endif; ?>
+ <?php endif; ?>
+ <?php endif; ?>
 <?php endif; ?>

@@ -43,16 +43,11 @@ h1, h2, h3, h4, h5, h6 {
 	font-weight:normal;
 }
 
-q:before, q:after {
-	content:'';
-}
-
 abbr, acronym {
 	border-top-width:0px;
 	border-right-width:0px;
 	border-bottom-width:0px;
 	border-left-width:0px;
-	border-style:initial;
 	border-top-color:#000000;
 	border-right-color:#000000;
 	border-bottom-color:#000000;
@@ -69,12 +64,10 @@ abbr, acronym {
 
 
 body {
-	font-stretch:inherit;
 	background-image:url(../images/background.jpg);
 	background-repeat-x:repeat;
 	background-repeat-y:repeat;
 	background-repeat:repeat;
-	background-size:inherit;
 	margin-left:auto;
 	margin-right:auto;
 	font-size:12px;
@@ -101,7 +94,7 @@ h2 {
 h3 {
 	font-size:14px;
 	font-weight:bold;
-	line-height:18.2px;
+	line-height:18px;
 	margin-bottom:0px;
 }
 
@@ -109,10 +102,12 @@ h4 {
 font-size:13px;
 font-weight:bold;
 line-height:18px;
-padding-top:18px;
 }
 
-
+h5 {
+  font-size: 12px;
+  font-style: italic;
+}
 
 div.logo {
 	color:#333333;
@@ -467,7 +462,7 @@ div.rightWrapper p + p {
 .sliderImage div {
    position: absolute; /* important */
    left: 0;
-   font: 12px/16px Arial, Helvetica World, sans-serif;
+   font: 12px/16px Arial, 'Helvetica World', sans-serif;
    font-weight:bold;
    padding:8px 8px;
    width: 414px;
@@ -705,12 +700,21 @@ div.mainContents {
 */
 
 .aboutProject {
-	width:404px;
-	float:left;
-	margin-top:18px;
+	width: 404px;
+  float: left;
+  margin-top:18px;
 	margin-right:12px;
 	margin-bottom:18px;
 }
+
+div.content {
+  min-width: 60%;
+  width: 75%;
+  max-width: 85%;
+  margin-top: 18px;
+  margin-bottom: 18px;
+}
+
 
 div.rightImage {
 	margin-top:18px;
@@ -824,10 +828,11 @@ div.serviceLogo {
 div.serviceLogo img {
 	float:left;
 	vertical-align:text-bottom;
+  padding-right: 12px;
 	}
 
-div.serviceLogo p {
-	padding-top:12px;
+div.serviceLogo>p {
+	padding-top:18px;
 	color: green;
 	font-weight:bold;
 	font-size:14px;
@@ -1154,34 +1159,47 @@ div.map {
  *
  *****************************/
 
-div.aboutProject ul {
+div.mainContents ul {
  list-style-type: disc;
  list-style-position: outside;
  padding-left: 20px;
+ margin-bottom: 18px;
  }
 
-div.aboutProject ul li {
+div.mainContents ul>li {
  list-style-image: none;
  list-style-type: disc;
  list-style-position: outside;
  }
 
- div.aboutProject ol {
+ div.mainContents ol {
  list-style-type: decimal;
  list-style-position: outside;
  padding-left: 20px;
+ margin-bottom: 18px;
  }
 
-div.aboutProject ol li {
+div.mainContents ol>li {
  list-style-image: none;
  list-style-type: decimal;
  list-style-position: outside;
  }
 
- div.aboutProject p {
+ div.content>p, div.aboutProject>p {
 	text-indent:1em;
+  margin-bottom: 18px;
 	}
 
-div.aboutProject strong {
+div.mainContents strong {
 	font-weight:bold;
+}
+
+div.mainContents h3 {
+  margin-bottom: 18px;
+}
+
+div.item-list ul {
+  list-style-type: none;
+  padding-left: 0px;
+  list-style-position: inside;
 }

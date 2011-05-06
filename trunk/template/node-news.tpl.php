@@ -55,6 +55,10 @@
 ?>
 <?php if ($page): ?>
  <h2><?php print $title; ?></h2>
+   <?php if (!$newsImage_filepath && !$newsImage_filepath2): ?>
+      <div class="content"><?php print $newsBody; ?></div>
+   
+  <?php else: ?>
  <div class="aboutProject"><?php print $newsBody; ?></div>
  <div class="rightImage">
   <?php if ($newsImage_filepath): ?>
@@ -76,11 +80,11 @@
   <?php endif; ?>
  </div>
 
-		<?php if ($pager): ?>
-     <div class="pager">
+ <?endif; ?>
+
+ <div class="pager">
       <?php print $pager; ?>
-     </div> 
-   <?php endif; ?>
+ </div> 
    
 <?php endif; ?>
 

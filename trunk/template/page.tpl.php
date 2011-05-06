@@ -288,7 +288,7 @@ try{a+=';r='+escape(d.referrer);}catch(e){}try{a+=';j='+navigator.javaEnabled();
 try{s=screen;a+=';s='+s.width+'*'+s.height;a+=';d='+(s.colorDepth?s.colorDepth:s.pixelDepth);js=12;}catch(e){}
 try{if(typeof((new Array).push('t'))==="number")js=13;}catch(e){}
 try{d.write('<a href="http://top.mail.ru/jump?from=2001192"><img src="http://d9.c8.be.a1.top.mail.ru/counter?id=2001192;t=95;js='+js+
-a+';rand='+Math.random()+'" alt="Рейтинг@Mail.ru" style="border:0;" height="18" width="88" \/><\/a>');}catch(e){}//]]></script>
+a+';rand='+Math.random()+'" alt="\u0420ейтин\u0433@Mail.ru" style="border:0;" height="18" width="88" \/><\/a>');}catch(e){}//]]></script>
 <noscript><p><a href="http://top.mail.ru/jump?from=2001192"><img src="http://d9.c8.be.a1.top.mail.ru/counter?js=na;id=2001192;t=95"
 style="border:0;" height="18" width="88" alt="Рейтинг@Mail.ru" /></a></p></noscript>
 <!-- //Rating@Mail.ru counter -->

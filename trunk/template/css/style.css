@@ -688,6 +688,7 @@ div.squarePic {height:30px !important;}
 div.mainContents {
 	float:left;
 	width:830px;
+  min-height: 520px;
 	position:relative;
 	left:-122px;
 	overflow:hidden;
@@ -1081,23 +1082,6 @@ div.partners	{
 	margin-bottom:18px;
 	}
 	
-ul.partnersList	{
-	list-style-type: none;
-	}
-	
-ul.partnersList li	{
-	float:none;
-	clear:both;
-	margin-bottom: 18px;
-	width: auto;
-	height: auto;
-	font-weight: bold;
-	font-size: 12px;
-	line-height: 18px;
-	color:#000;
-	vertical-align: bottom;
-	}
-	
 span.partnerLogo	{
 	width: 185px;
   text-align: right;
@@ -1184,6 +1168,24 @@ div.mainContents ol>li {
  list-style-type: decimal;
  list-style-position: outside;
  }
+
+ div.partners > ul.partnersList	{
+	list-style-type: none;
+	}
+
+div.partners li	{
+	float:none;
+	clear:both;
+	margin-bottom: 18px;
+	width: auto;
+	height: auto;
+	font-weight: bold;
+	font-size: 12px;
+	line-height: 18px;
+	color:#000;
+	vertical-align: bottom;
+  list-style-type: none !important;
+	}
 
  div.content>p, div.aboutProject>p {
 	text-indent:1em;
